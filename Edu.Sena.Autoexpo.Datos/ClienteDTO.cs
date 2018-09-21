@@ -10,10 +10,15 @@ namespace Edu.Sena.Autoexpo.Datos {
         private string direccion;
         private string telefono;
 
-        public ClienteDTO() {
+        public ClienteDTO() : base() {
         }
 
-        public ClienteDTO(string email, string direccion, string telefono) {
+        public ClienteDTO(int id, string nombres, string apellidos, string clave, RolDTO rol, string email, string direccion, string telefono) : base(id, nombres, apellidos, clave, rol) {
+            this.Id = id;
+            this.Nombres = nombres;
+            this.Apellidos = apellidos;
+            this.Clave = clave;
+            this.Rol = rol;
             this.Email = email;
             this.Direccion = direccion;
             this.Telefono = telefono;

@@ -12,6 +12,12 @@ namespace Edu.Sena.Autoexpo.Datos {
         private string clave;
         private RolDTO rol;
 
+        protected int Id { get => id; set => id = value; }
+        protected string Nombres { get => nombres; set => nombres = value; }
+        protected string Apellidos { get => apellidos; set => apellidos = value; }
+        protected string Clave { get => clave; set => clave = value; }
+        protected RolDTO Rol { get => rol; set => rol = value; }
+
         public PersonaDTO() {
         }
 
@@ -22,11 +28,5 @@ namespace Edu.Sena.Autoexpo.Datos {
             this.Clave = clave;
             this.Rol = rol;
         }
-
-        protected int Id { get => id; set => id = value; }
-        protected string Nombres { get => nombres; set => nombres = value; }
-        protected string Apellidos { get => apellidos; set => apellidos = value; }
-        protected string Clave { get => clave; set => clave = value; }
-        public RolDTO Rol { get => rol; set => rol = value; }
     }
 }
