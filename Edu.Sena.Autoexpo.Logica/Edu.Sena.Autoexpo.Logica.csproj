@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoDAO.cs" />
+    <Compile Include="ClienteDAO.cs" />
+    <Compile Include="EstadoAutoDAO.cs" />
+    <Compile Include="IDAO.cs" />
     <Compile Include="LogicaUtil.cs" />
+    <Compile Include="MarcaDAO.cs" />
+    <Compile Include="PersonaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolDAO.cs" />
+    <Compile Include="VentaDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Edu.Sena.Autoexpo.Datos\Edu.Sena.Autoexpo.Datos.csproj">
