@@ -17,10 +17,30 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         }
 
         private void BtnIniciarSesion_Click(object sender, EventArgs e) {
-            if (tbDocumentoIniciarSesion.Text.Equals("") || tbClaveIniciarSesion.Text.Equals("")) {
-                MessageBox.Show("Llene todos los campos");
+            string email = tbEmailIniciarSesion.Text.Trim(),
+                clave = tbClaveIniciarSesion.Text.Trim();
+
+            if (email.Equals("") || clave.Equals("")) {
+                MessageBox.Show("Digite ambos campos");
             } else {
-                MessageBox.Show("Bien");
+                int login = LogicaUtil.UDAO.BuscarPorDocumentoClave(email, clave);
+
+                switch (login) {
+                    case 1:
+                        MessageBox.Show("Hola " + LogicaUtil.Sesion.Nombres + " " +
+                            LogicaUtil.Sesion.Apellidos,
+                        LogicaUtil.Sesion.Rol.Rol);
+                        //switch (LogicaUtil.Sesion.Rol.Id) {
+                        //    case 1:
+                        //        break;
+                        //    case 2:
+                        //        break;
+                        //}
+                        break;
+                    case 2:
+                        MessageBox.Show("ERROR: Usuario no encontrado");
+                        break;
+                }
             }
         }
     }

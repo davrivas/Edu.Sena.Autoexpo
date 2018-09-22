@@ -16,14 +16,14 @@ namespace Edu.Sena.Autoexpo.Logica {
         private static RolDAO rDAO = new RolDAO();
         private static UsuarioDAO uDAO = new UsuarioDAO();
         private static VentaDAO vDAO = new VentaDAO();
-        
+
         public static UsuarioDTO Sesion { get => sesion; set => sesion = value; }
 
-        internal static AutoDAO ADAO { get => aDAO; set => aDAO = value; }
-        internal static EstadoAutoDAO EaDAO { get => eaDAO; set => eaDAO = value; }
-        internal static MarcaDAO MDAO { get => mDAO; set => mDAO = value; }
-        internal static RolDAO RDAO { get => rDAO; set => rDAO = value; }
-        internal static UsuarioDAO UDAO { get => uDAO; set => uDAO = value; }
-        internal static VentaDAO VDAO { get => vDAO; set => vDAO = value; }
+        public static AutoDAO ADAO { get => aDAO; set => aDAO = value; }
+        public static EstadoAutoDAO EaDAO { get => eaDAO; set => eaDAO = value; }
+        public static MarcaDAO MDAO { get => mDAO; set => mDAO = value; }
+        public static RolDAO RDAO { get => rDAO; set => rDAO = value; }
+        public static UsuarioDAO UDAO { get => uDAO; set => uDAO = value; }
+        public static VentaDAO VDAO { get => vDAO; set => vDAO = value; }
     }
 }

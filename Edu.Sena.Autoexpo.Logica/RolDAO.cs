@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Edu.Sena.Autoexpo.Logica {
-    class RolDAO : IDAO<RolDTO> {
+    public class RolDAO : IDAO<RolDTO> {
         public RolDAO() {
         }
 

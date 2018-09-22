@@ -5,9 +5,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Logica {
-    class UsuarioDAO : IDAO<UsuarioDTO> {
+    public class UsuarioDAO : IDAO<UsuarioDTO> {
         public UsuarioDAO() {
         }
 
@@ -66,8 +67,16 @@ namespace Edu.Sena.Autoexpo.Logica {
                     "'" + obj.Clave + "', " +
                     "'" + obj.Email + "', " +
                     "'" + obj.Direccion + "', " +
-                    "'" + obj.Telefono + "')";
-                SqlCommand comando
+                    "'" + obj.Telefono + "', " +
+                    ""+obj.Rol.Id + ")";
+                SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
+                int cont = comando.ExecuteNonQuery();
+
+                if (cont == 1)  {
+                    MessageBox.Show("Registro satisfactorio");
+                } else {
+                    MessageBox.Show("Error al realizar registro");
+                }
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
             } finally {
@@ -75,18 +84,19 @@ namespace Edu.Sena.Autoexpo.Logica {
             }
         }
 
-        public int BuscarPorDocumentoClave(int documento, string clave) {
+        public int BuscarPorDocumentoClave(string email, string clave) {
             try {
                 Conexion.Abrir();
                 string sql = "SELECT * " +
                     "FROM Usuario " +
-                    "WHERE UsuarioId = " + documento + " " +
+                    "WHERE Email = " + email + " " +
                     "AND Clave = '" + clave + "'";
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
                 SqlDataReader lector = comando.ExecuteReader();
 
                 if (lector.Read()) {
-                    LogicaUtil.Sesion = new UsuarioDTO();
+                    int usuarioId = Convert.ToInt32(lector["UsuarioId"].ToString().Trim());
+                    LogicaUtil.Sesion = LogicaUtil.UDAO.BuscarPorId(usuarioId);
                     return 1;
                 } else {
                     return 0;

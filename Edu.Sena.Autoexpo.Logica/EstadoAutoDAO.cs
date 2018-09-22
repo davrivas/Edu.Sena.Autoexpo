@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Logica {
-    class EstadoAutoDAO : IDAO<EstadoAutoDTO> {
+    public class EstadoAutoDAO : IDAO<EstadoAutoDTO> {
         public EstadoAutoDAO() {
         }
 

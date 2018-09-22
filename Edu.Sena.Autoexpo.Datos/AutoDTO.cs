@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Edu.Sena.Autoexpo.Datos {
     public class AutoDTO {
+        private int id;
         private string placa;
         private string modelo;
         private int numeroPuertas;
@@ -27,6 +28,7 @@ namespace Edu.Sena.Autoexpo.Datos {
             this.Estado = estado;
         }
 
+        public int Id { get => id; set => id = value; }
         public string Placa { get => placa; set => placa = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public int NumeroPuertas { get => numeroPuertas; set => numeroPuertas = value; }

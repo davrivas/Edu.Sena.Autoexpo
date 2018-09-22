@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Edu.Sena.Autoexpo.Logica {
-    class MarcaDAO : IDAO<MarcaDTO> {
+    public class MarcaDAO : IDAO<MarcaDTO> {
         public MarcaDAO() {
         }
 
