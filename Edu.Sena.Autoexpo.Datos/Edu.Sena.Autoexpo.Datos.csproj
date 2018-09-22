@@ -43,8 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoDTO.cs" />
-    <Compile Include="ClienteDTO.cs" />
-    <Compile Include="PersonaDTO.cs" />
+    <Compile Include="UsuarioDTO.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="EstadoAutoDTO.cs" />
     <Compile Include="MarcaDTO.cs" />

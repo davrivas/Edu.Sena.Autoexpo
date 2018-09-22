@@ -24,16 +24,16 @@
         /// </summary>
         private void InitializeComponent() {
             this.lblRegistrarse = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.tbNombres = new System.Windows.Forms.TextBox();
+            this.lblNombres = new System.Windows.Forms.Label();
+            this.tbApellidos = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbDocumento = new System.Windows.Forms.TextBox();
+            this.tbTelefono = new System.Windows.Forms.TextBox();
+            this.tbDireccion = new System.Windows.Forms.TextBox();
+            this.tbClave = new System.Windows.Forms.TextBox();
+            this.lblApellidos = new System.Windows.Forms.Label();
+            this.tbConfimacion = new System.Windows.Forms.TextBox();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -41,103 +41,105 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.btnRegistrarse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.lblClaveIniciarSesion = new System.Windows.Forms.Label();
+            this.lblDocumentoIniciarSesion = new System.Windows.Forms.Label();
+            this.tbClaveIniciarSesion = new System.Windows.Forms.TextBox();
+            this.tbDocumentoIniciarSesion = new System.Windows.Forms.TextBox();
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.lblAutoexpo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblRegistrarse
             // 
             this.lblRegistrarse.AutoSize = true;
-            this.lblRegistrarse.Location = new System.Drawing.Point(244, 9);
+            this.lblRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrarse.Location = new System.Drawing.Point(245, 56);
             this.lblRegistrarse.Name = "lblRegistrarse";
-            this.lblRegistrarse.Size = new System.Drawing.Size(60, 13);
+            this.lblRegistrarse.Size = new System.Drawing.Size(71, 13);
             this.lblRegistrarse.TabIndex = 0;
             this.lblRegistrarse.Text = "Registrarse";
             // 
-            // textBox1
+            // tbNombres
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbNombres.Location = new System.Drawing.Point(179, 95);
+            this.tbNombres.Name = "tbNombres";
+            this.tbNombres.Size = new System.Drawing.Size(100, 20);
+            this.tbNombres.TabIndex = 1;
             // 
-            // lblNombre
+            // lblNombres
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(175, 32);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Location = new System.Drawing.Point(176, 79);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(49, 13);
+            this.lblNombres.TabIndex = 2;
+            this.lblNombres.Text = "Nombres";
             // 
-            // textBox2
+            // tbApellidos
             // 
-            this.textBox2.Location = new System.Drawing.Point(284, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.tbApellidos.Location = new System.Drawing.Point(285, 95);
+            this.tbApellidos.Name = "tbApellidos";
+            this.tbApellidos.Size = new System.Drawing.Size(100, 20);
+            this.tbApellidos.TabIndex = 3;
             // 
-            // textBox3
+            // tbEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(285, 87);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbEmail.Location = new System.Drawing.Point(286, 134);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.TabIndex = 5;
             // 
-            // textBox4
+            // tbDocumento
             // 
-            this.textBox4.Location = new System.Drawing.Point(179, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.tbDocumento.Location = new System.Drawing.Point(180, 134);
+            this.tbDocumento.Name = "tbDocumento";
+            this.tbDocumento.Size = new System.Drawing.Size(100, 20);
+            this.tbDocumento.TabIndex = 4;
             // 
-            // textBox5
+            // tbTelefono
             // 
-            this.textBox5.Location = new System.Drawing.Point(281, 126);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 7;
+            this.tbTelefono.Location = new System.Drawing.Point(282, 173);
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(100, 20);
+            this.tbTelefono.TabIndex = 7;
             // 
-            // textBox6
+            // tbDireccion
             // 
-            this.textBox6.Location = new System.Drawing.Point(178, 126);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
+            this.tbDireccion.Location = new System.Drawing.Point(179, 173);
+            this.tbDireccion.Name = "tbDireccion";
+            this.tbDireccion.Size = new System.Drawing.Size(100, 20);
+            this.tbDireccion.TabIndex = 6;
             // 
-            // textBox7
+            // tbClave
             // 
-            this.textBox7.Location = new System.Drawing.Point(179, 165);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PasswordChar = '*';
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 8;
+            this.tbClave.Location = new System.Drawing.Point(180, 212);
+            this.tbClave.Name = "tbClave";
+            this.tbClave.PasswordChar = '*';
+            this.tbClave.Size = new System.Drawing.Size(100, 20);
+            this.tbClave.TabIndex = 8;
             // 
-            // lblApellido
+            // lblApellidos
             // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(281, 32);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
-            this.lblApellido.TabIndex = 9;
-            this.lblApellido.Text = "Apellido";
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Location = new System.Drawing.Point(282, 79);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(49, 13);
+            this.lblApellidos.TabIndex = 9;
+            this.lblApellidos.Text = "Apellidos";
             // 
-            // textBox8
+            // tbConfimacion
             // 
-            this.textBox8.Location = new System.Drawing.Point(281, 165);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.PasswordChar = '*';
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 10;
+            this.tbConfimacion.Location = new System.Drawing.Point(282, 212);
+            this.tbConfimacion.Name = "tbConfimacion";
+            this.tbConfimacion.PasswordChar = '*';
+            this.tbConfimacion.Size = new System.Drawing.Size(100, 20);
+            this.tbConfimacion.TabIndex = 10;
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(176, 71);
+            this.lblDocumento.Location = new System.Drawing.Point(177, 118);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(62, 13);
             this.lblDocumento.TabIndex = 11;
@@ -146,7 +148,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(282, 71);
+            this.lblEmail.Location = new System.Drawing.Point(283, 118);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 12;
@@ -155,7 +157,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(176, 110);
+            this.lblDireccion.Location = new System.Drawing.Point(177, 157);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 13;
@@ -164,7 +166,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(278, 110);
+            this.lblTelefono.Location = new System.Drawing.Point(279, 157);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 14;
@@ -173,7 +175,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(176, 149);
+            this.lblClave.Location = new System.Drawing.Point(177, 196);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 15;
@@ -182,7 +184,7 @@
             // lblConfirmacion
             // 
             this.lblConfirmacion.AutoSize = true;
-            this.lblConfirmacion.Location = new System.Drawing.Point(278, 149);
+            this.lblConfirmacion.Location = new System.Drawing.Point(279, 196);
             this.lblConfirmacion.Name = "lblConfirmacion";
             this.lblConfirmacion.Size = new System.Drawing.Size(68, 13);
             this.lblConfirmacion.TabIndex = 16;
@@ -190,75 +192,88 @@
             // 
             // btnRegistrarse
             // 
-            this.btnRegistrarse.Location = new System.Drawing.Point(247, 191);
+            this.btnRegistrarse.Location = new System.Drawing.Point(248, 238);
             this.btnRegistrarse.Name = "btnRegistrarse";
             this.btnRegistrarse.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrarse.TabIndex = 17;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblClaveIniciarSesion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Clave";
+            this.lblClaveIniciarSesion.AutoSize = true;
+            this.lblClaveIniciarSesion.Location = new System.Drawing.Point(13, 118);
+            this.lblClaveIniciarSesion.Name = "lblClaveIniciarSesion";
+            this.lblClaveIniciarSesion.Size = new System.Drawing.Size(34, 13);
+            this.lblClaveIniciarSesion.TabIndex = 21;
+            this.lblClaveIniciarSesion.Text = "Clave";
             // 
-            // label2
+            // lblDocumentoIniciarSesion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Documento";
+            this.lblDocumentoIniciarSesion.AutoSize = true;
+            this.lblDocumentoIniciarSesion.Location = new System.Drawing.Point(13, 79);
+            this.lblDocumentoIniciarSesion.Name = "lblDocumentoIniciarSesion";
+            this.lblDocumentoIniciarSesion.Size = new System.Drawing.Size(62, 13);
+            this.lblDocumentoIniciarSesion.TabIndex = 20;
+            this.lblDocumentoIniciarSesion.Text = "Documento";
             // 
-            // textBox9
+            // tbClaveIniciarSesion
             // 
-            this.textBox9.Location = new System.Drawing.Point(15, 87);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.PasswordChar = '*';
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 19;
+            this.tbClaveIniciarSesion.Location = new System.Drawing.Point(16, 134);
+            this.tbClaveIniciarSesion.Name = "tbClaveIniciarSesion";
+            this.tbClaveIniciarSesion.PasswordChar = '*';
+            this.tbClaveIniciarSesion.Size = new System.Drawing.Size(100, 20);
+            this.tbClaveIniciarSesion.TabIndex = 19;
             // 
-            // textBox10
+            // tbDocumentoIniciarSesion
             // 
-            this.textBox10.Location = new System.Drawing.Point(15, 48);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 18;
+            this.tbDocumentoIniciarSesion.Location = new System.Drawing.Point(16, 95);
+            this.tbDocumentoIniciarSesion.Name = "tbDocumentoIniciarSesion";
+            this.tbDocumentoIniciarSesion.Size = new System.Drawing.Size(100, 20);
+            this.tbDocumentoIniciarSesion.TabIndex = 18;
             // 
             // lblIniciarSesion
             // 
             this.lblIniciarSesion.AutoSize = true;
-            this.lblIniciarSesion.Location = new System.Drawing.Point(13, 9);
+            this.lblIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIniciarSesion.Location = new System.Drawing.Point(14, 56);
             this.lblIniciarSesion.Name = "lblIniciarSesion";
-            this.lblIniciarSesion.Size = new System.Drawing.Size(68, 13);
+            this.lblIniciarSesion.Size = new System.Drawing.Size(82, 13);
             this.lblIniciarSesion.TabIndex = 22;
             this.lblIniciarSesion.Text = "Iniciar sesión";
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(15, 113);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(16, 160);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(100, 23);
             this.btnIniciarSesion.TabIndex = 23;
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
+            // 
+            // lblAutoexpo
+            // 
+            this.lblAutoexpo.AutoSize = true;
+            this.lblAutoexpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutoexpo.Location = new System.Drawing.Point(143, 9);
+            this.lblAutoexpo.Name = "lblAutoexpo";
+            this.lblAutoexpo.Size = new System.Drawing.Size(96, 25);
+            this.lblAutoexpo.TabIndex = 24;
+            this.lblAutoexpo.Text = "Autoexpo";
             // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 230);
+            this.ClientSize = new System.Drawing.Size(398, 283);
+            this.Controls.Add(this.lblAutoexpo);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblIniciarSesion);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.lblClaveIniciarSesion);
+            this.Controls.Add(this.lblDocumentoIniciarSesion);
+            this.Controls.Add(this.tbClaveIniciarSesion);
+            this.Controls.Add(this.tbDocumentoIniciarSesion);
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.lblConfirmacion);
             this.Controls.Add(this.lblClave);
@@ -266,16 +281,16 @@
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblDocumento);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbConfimacion);
+            this.Controls.Add(this.lblApellidos);
+            this.Controls.Add(this.tbClave);
+            this.Controls.Add(this.tbTelefono);
+            this.Controls.Add(this.tbDireccion);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbDocumento);
+            this.Controls.Add(this.tbApellidos);
+            this.Controls.Add(this.lblNombres);
+            this.Controls.Add(this.tbNombres);
             this.Controls.Add(this.lblRegistrarse);
             this.Name = "Index";
             this.Text = "Autoexpo";
@@ -287,16 +302,16 @@
         #endregion
 
         private System.Windows.Forms.Label lblRegistrarse;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox tbNombres;
+        private System.Windows.Forms.Label lblNombres;
+        private System.Windows.Forms.TextBox tbApellidos;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbDocumento;
+        private System.Windows.Forms.TextBox tbTelefono;
+        private System.Windows.Forms.TextBox tbDireccion;
+        private System.Windows.Forms.TextBox tbClave;
+        private System.Windows.Forms.Label lblApellidos;
+        private System.Windows.Forms.TextBox tbConfimacion;
         private System.Windows.Forms.Label lblDocumento;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblDireccion;
@@ -304,12 +319,13 @@
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Label lblConfirmacion;
         private System.Windows.Forms.Button btnRegistrarse;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label lblClaveIniciarSesion;
+        private System.Windows.Forms.Label lblDocumentoIniciarSesion;
+        private System.Windows.Forms.TextBox tbClaveIniciarSesion;
+        private System.Windows.Forms.TextBox tbDocumentoIniciarSesion;
         private System.Windows.Forms.Label lblIniciarSesion;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Label lblAutoexpo;
     }
 }
 
