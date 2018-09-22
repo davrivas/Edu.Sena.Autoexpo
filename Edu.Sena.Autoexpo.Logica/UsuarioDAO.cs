@@ -17,7 +17,7 @@ namespace Edu.Sena.Autoexpo.Logica {
                 Conexion.Abrir();
                 string sql = "SELECT * " +
                     "FROM Usuario " +
-                    "WHERE Usuario = " + id;
+                    "WHERE UsuarioId = " + id;
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
                 SqlDataReader lector = comando.ExecuteReader();
 
@@ -27,8 +27,8 @@ namespace Edu.Sena.Autoexpo.Logica {
                         Convert.ToInt32(lector["UsuarioId"].ToString().Trim()),
                         lector["Nombre"].ToString().Trim(),
                         lector["Apellido"].ToString().Trim(),
+                        lector["Email"].ToString().Trim(), 
                         lector["Clave"].ToString().Trim(),
-                        lector["Email"].ToString().Trim(),
                         lector["Direccion"].ToString().Trim(),
                         lector["Telefono"].ToString().Trim(),
                         LogicaUtil.RDAO.BuscarPorId(rolId)
@@ -61,42 +61,51 @@ namespace Edu.Sena.Autoexpo.Logica {
             try {
                 Conexion.Abrir();
                 string sql = "INSERT INTO Usuario VALUES(" +
-                    "" + obj.Id + ", " +
                     "'" + obj.Nombres + "', " +
                     "'" + obj.Apellidos + "', " +
+                    "'" + obj.Email + "', " + 
                     "'" + obj.Clave + "', " +
-                    "'" + obj.Email + "', " +
                     "'" + obj.Direccion + "', " +
                     "'" + obj.Telefono + "', " +
-                    ""+obj.Rol.Id + ")";
+                    "2)";
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
                 int cont = comando.ExecuteNonQuery();
 
                 if (cont == 1)  {
                     MessageBox.Show("Registro satisfactorio");
                 } else {
-                    MessageBox.Show("Error al realizar registro");
+                    MessageBox.Show("No se pudo realizar registro", "ERROR");
                 }
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
+                MessageBox.Show("No se pudo realizar registro", "ERROR");
             } finally {
                 Conexion.Cerrar();
             }
         }
 
-        public int BuscarPorDocumentoClave(string email, string clave) {
+        public int BuscarPorEmailClave(string email, string clave) {
             try {
                 Conexion.Abrir();
                 string sql = "SELECT * " +
                     "FROM Usuario " +
-                    "WHERE Email = " + email + " " +
+                    "WHERE Email = '" + email + "' " +
                     "AND Clave = '" + clave + "'";
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
                 SqlDataReader lector = comando.ExecuteReader();
 
                 if (lector.Read()) {
-                    int usuarioId = Convert.ToInt32(lector["UsuarioId"].ToString().Trim());
-                    LogicaUtil.Sesion = LogicaUtil.UDAO.BuscarPorId(usuarioId);
+                    int rolId = Convert.ToInt32(lector["RolId"].ToString().Trim());
+                    LogicaUtil.Sesion = new UsuarioDTO(
+                        Convert.ToInt32(lector["UsuarioId"].ToString().Trim()),
+                        lector["Nombre"].ToString().Trim(),
+                        lector["Apellido"].ToString().Trim(),
+                        lector["Email"].ToString().Trim(),
+                        lector["Clave"].ToString().Trim(),
+                        lector["Direccion"].ToString().Trim(),
+                        lector["Telefono"].ToString().Trim(),
+                        LogicaUtil.RDAO.BuscarPorId(rolId)
+                    );
                     return 1;
                 } else {
                     return 0;

@@ -8,13 +8,16 @@ using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Datos {
     public class Conexion {
-        public static SqlConnection ConexionObj { get; set; } = new SqlConnection("Data Source=DESKTOP-0S26F42\\SQLEXPRESS;Initial Catalog=Autoexpo;Integrated Security=True");
+        public static string conexionString = "Data Source=DESKTOP-0S26F42\\SQLEXPRESS;Initial Catalog=Autoexpo;Integrated Security=True";
+        private static SqlConnection conexionObj = new SqlConnection(conexionString);
+
+        public static SqlConnection ConexionObj { get => conexionObj; set => conexionObj = value; }
 
         public static void Abrir() {
             try {
                 Cerrar();
                 ConexionObj.Open();
-                MessageBox.Show("¡Conexión exitosa!");
+                //MessageBox.Show("¡Conexión exitosa!");
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
                 MessageBox.Show("ERROR: no se pudo conectar a la base de datos");

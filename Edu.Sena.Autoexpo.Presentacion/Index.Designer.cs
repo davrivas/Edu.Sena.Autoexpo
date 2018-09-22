@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.lblRegistrarse = new System.Windows.Forms.Label();
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
@@ -79,28 +80,28 @@
             this.tbApellidos.Location = new System.Drawing.Point(285, 95);
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(100, 20);
-            this.tbApellidos.TabIndex = 3;
+            this.tbApellidos.TabIndex = 2;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(286, 134);
+            this.tbEmail.Location = new System.Drawing.Point(182, 134);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
-            this.tbEmail.TabIndex = 5;
+            this.tbEmail.TabIndex = 3;
             // 
             // tbTelefono
             // 
-            this.tbTelefono.Location = new System.Drawing.Point(282, 173);
+            this.tbTelefono.Location = new System.Drawing.Point(285, 134);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(100, 20);
-            this.tbTelefono.TabIndex = 7;
+            this.tbTelefono.TabIndex = 4;
             // 
             // tbDireccion
             // 
-            this.tbDireccion.Location = new System.Drawing.Point(179, 173);
+            this.tbDireccion.Location = new System.Drawing.Point(181, 173);
             this.tbDireccion.Name = "tbDireccion";
-            this.tbDireccion.Size = new System.Drawing.Size(100, 20);
-            this.tbDireccion.TabIndex = 6;
+            this.tbDireccion.Size = new System.Drawing.Size(204, 20);
+            this.tbDireccion.TabIndex = 5;
             // 
             // tbClave
             // 
@@ -108,7 +109,7 @@
             this.tbClave.Name = "tbClave";
             this.tbClave.PasswordChar = '*';
             this.tbClave.Size = new System.Drawing.Size(100, 20);
-            this.tbClave.TabIndex = 8;
+            this.tbClave.TabIndex = 6;
             // 
             // lblApellidos
             // 
@@ -125,12 +126,12 @@
             this.tbConfimacion.Name = "tbConfimacion";
             this.tbConfimacion.PasswordChar = '*';
             this.tbConfimacion.Size = new System.Drawing.Size(100, 20);
-            this.tbConfimacion.TabIndex = 10;
+            this.tbConfimacion.TabIndex = 7;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(283, 118);
+            this.lblEmail.Location = new System.Drawing.Point(179, 118);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 12;
@@ -139,7 +140,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(177, 157);
+            this.lblDireccion.Location = new System.Drawing.Point(179, 157);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 13;
@@ -148,7 +149,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(279, 157);
+            this.lblTelefono.Location = new System.Drawing.Point(282, 118);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 14;
@@ -180,6 +181,7 @@
             this.btnRegistrarse.TabIndex = 17;
             this.btnRegistrarse.Text = "Registrarse";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.BtnRegistrarse_Click);
             // 
             // lblClaveIniciarSesion
             // 
@@ -195,9 +197,9 @@
             this.lblEmailIniciarSesion.AutoSize = true;
             this.lblEmailIniciarSesion.Location = new System.Drawing.Point(13, 79);
             this.lblEmailIniciarSesion.Name = "lblEmailIniciarSesion";
-            this.lblEmailIniciarSesion.Size = new System.Drawing.Size(62, 13);
+            this.lblEmailIniciarSesion.Size = new System.Drawing.Size(32, 13);
             this.lblEmailIniciarSesion.TabIndex = 20;
-            this.lblEmailIniciarSesion.Text = "Documento";
+            this.lblEmailIniciarSesion.Text = "Email";
             // 
             // tbClaveIniciarSesion
             // 
@@ -205,14 +207,16 @@
             this.tbClaveIniciarSesion.Name = "tbClaveIniciarSesion";
             this.tbClaveIniciarSesion.PasswordChar = '*';
             this.tbClaveIniciarSesion.Size = new System.Drawing.Size(100, 20);
-            this.tbClaveIniciarSesion.TabIndex = 19;
+            this.tbClaveIniciarSesion.TabIndex = 99;
+            this.tbClaveIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbClaveIniciarSesion_KeyDown);
             // 
             // tbEmailIniciarSesion
             // 
             this.tbEmailIniciarSesion.Location = new System.Drawing.Point(16, 95);
             this.tbEmailIniciarSesion.Name = "tbEmailIniciarSesion";
             this.tbEmailIniciarSesion.Size = new System.Drawing.Size(100, 20);
-            this.tbEmailIniciarSesion.TabIndex = 18;
+            this.tbEmailIniciarSesion.TabIndex = 98;
+            this.tbEmailIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbEmailIniciarSesion_KeyDown);
             // 
             // lblIniciarSesion
             // 
@@ -248,7 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 283);
+            this.ClientSize = new System.Drawing.Size(398, 269);
             this.Controls.Add(this.lblAutoexpo);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblIniciarSesion);
@@ -272,8 +276,12 @@
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.tbNombres);
             this.Controls.Add(this.lblRegistrarse);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Index";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autoexpo";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Index_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

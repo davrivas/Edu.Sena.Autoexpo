@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Edu.Sena.Autoexpo.Logica {
     public class VentaDAO : IDAO<VentaDTO> {
-        private readonly double iva = 0.19;
+        private readonly double porcentajeIVA = 0.19;
 
         public VentaDAO() {
         }

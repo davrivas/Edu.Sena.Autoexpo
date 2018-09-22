@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +49,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\Autos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Autos.Designer.cs">
+      <DependentUpon>Autos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\AutosDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\AutosDisponibles.Designer.cs">
+      <DependentUpon>AutosDisponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\HistorialCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cliente\HistorialCompras.Designer.cs">
+      <DependentUpon>HistorialCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +87,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\Autos.resx">
+      <DependentUpon>Autos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\AutosDisponibles.resx">
+      <DependentUpon>AutosDisponibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente\HistorialCompras.resx">
+      <DependentUpon>HistorialCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +136,9 @@
       <Project>{d4abe2af-fb97-4898-8d29-4a919a0c2839}</Project>
       <Name>Edu.Sena.Autoexpo.Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

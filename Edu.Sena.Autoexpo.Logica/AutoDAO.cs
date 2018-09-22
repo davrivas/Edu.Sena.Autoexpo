@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Logica {
     public class AutoDAO : IDAO<AutoDTO> {
@@ -34,10 +35,12 @@ namespace Edu.Sena.Autoexpo.Logica {
                     );
                     return auto;
                 } else {
+                    MessageBox.Show("No se encontró auto", "ERROR");
                     return null;
                 }
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
+                MessageBox.Show("No se encontró auto", "ERROR");
                 return null;
             } finally {
                 Conexion.Cerrar();
