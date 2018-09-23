@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Presentacion {
     public partial class Administrador : Form {
-        private AutoCRUD crud = new AutoCRUD();
+        private AutoCRUD crud;
 
         public Administrador() {
             InitializeComponent();
@@ -40,11 +40,21 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e) {
+            crud = new AutoCRUD();
+            crud.Show();
             crud.MostrarAgregar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e) {
+            crud = new AutoCRUD();
+            crud.Show();
             crud.MostrarEditarEliminar("Editar");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e) {
+            crud = new AutoCRUD();
+            crud.Show();
+            crud.MostrarEditarEliminar("Eliminar");
         }
     }
 }
