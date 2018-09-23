@@ -46,6 +46,8 @@
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabsCliente.SuspendLayout();
             this.tabAutosVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -105,6 +107,8 @@
             // 
             // tabEditarPerfil
             // 
+            this.tabEditarPerfil.Controls.Add(this.label1);
+            this.tabEditarPerfil.Controls.Add(this.textBox1);
             this.tabEditarPerfil.Controls.Add(this.lblConfirmacion);
             this.tabEditarPerfil.Controls.Add(this.lblClave);
             this.tabEditarPerfil.Controls.Add(this.lblTelefono);
@@ -130,7 +134,7 @@
             // lblConfirmacion
             // 
             this.lblConfirmacion.AutoSize = true;
-            this.lblConfirmacion.Location = new System.Drawing.Point(419, 201);
+            this.lblConfirmacion.Location = new System.Drawing.Point(291, 128);
             this.lblConfirmacion.Name = "lblConfirmacion";
             this.lblConfirmacion.Size = new System.Drawing.Size(68, 13);
             this.lblConfirmacion.TabIndex = 30;
@@ -139,7 +143,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(317, 201);
+            this.lblClave.Location = new System.Drawing.Point(291, 50);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 29;
@@ -148,7 +152,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(422, 123);
+            this.lblTelefono.Location = new System.Drawing.Point(112, 89);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 28;
@@ -157,7 +161,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(319, 162);
+            this.lblDireccion.Location = new System.Drawing.Point(9, 128);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 27;
@@ -166,7 +170,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(319, 123);
+            this.lblEmail.Location = new System.Drawing.Point(9, 89);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(32, 13);
             this.lblEmail.TabIndex = 26;
@@ -174,7 +178,7 @@
             // 
             // tbConfimacion
             // 
-            this.tbConfimacion.Location = new System.Drawing.Point(422, 217);
+            this.tbConfimacion.Location = new System.Drawing.Point(294, 144);
             this.tbConfimacion.Name = "tbConfimacion";
             this.tbConfimacion.PasswordChar = '*';
             this.tbConfimacion.Size = new System.Drawing.Size(100, 20);
@@ -183,7 +187,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(422, 84);
+            this.lblApellidos.Location = new System.Drawing.Point(112, 50);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(49, 13);
             this.lblApellidos.TabIndex = 25;
@@ -191,7 +195,7 @@
             // 
             // tbClave
             // 
-            this.tbClave.Location = new System.Drawing.Point(320, 217);
+            this.tbClave.Location = new System.Drawing.Point(294, 66);
             this.tbClave.Name = "tbClave";
             this.tbClave.PasswordChar = '*';
             this.tbClave.Size = new System.Drawing.Size(100, 20);
@@ -199,28 +203,28 @@
             // 
             // tbTelefono
             // 
-            this.tbTelefono.Location = new System.Drawing.Point(425, 139);
+            this.tbTelefono.Location = new System.Drawing.Point(115, 105);
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(100, 20);
             this.tbTelefono.TabIndex = 21;
             // 
             // tbDireccion
             // 
-            this.tbDireccion.Location = new System.Drawing.Point(321, 178);
+            this.tbDireccion.Location = new System.Drawing.Point(11, 144);
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(204, 20);
             this.tbDireccion.TabIndex = 22;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(322, 139);
+            this.tbEmail.Location = new System.Drawing.Point(12, 105);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 20;
             // 
             // tbApellidos
             // 
-            this.tbApellidos.Location = new System.Drawing.Point(425, 100);
+            this.tbApellidos.Location = new System.Drawing.Point(115, 66);
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(100, 20);
             this.tbApellidos.TabIndex = 18;
@@ -228,7 +232,7 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(316, 84);
+            this.lblNombres.Location = new System.Drawing.Point(6, 50);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(49, 13);
             this.lblNombres.TabIndex = 19;
@@ -236,7 +240,7 @@
             // 
             // tbNombres
             // 
-            this.tbNombres.Location = new System.Drawing.Point(319, 100);
+            this.tbNombres.Location = new System.Drawing.Point(9, 66);
             this.tbNombres.Name = "tbNombres";
             this.tbNombres.Size = new System.Drawing.Size(100, 20);
             this.tbNombres.TabIndex = 17;
@@ -260,6 +264,23 @@
             this.btnComprar.TabIndex = 6;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(291, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Clave";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(294, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 31;
             // 
             // Cliente
             // 
@@ -308,5 +329,7 @@
         private System.Windows.Forms.TextBox tbApellidos;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.TextBox tbNombres;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
