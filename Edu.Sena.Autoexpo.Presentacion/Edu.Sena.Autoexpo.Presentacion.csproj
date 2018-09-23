@@ -49,35 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador\Autos.cs">
+    <Compile Include="Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Autos.Designer.cs">
-      <DependentUpon>Autos.cs</DependentUpon>
+    <Compile Include="Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Clientes.cs">
+    <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administrador\Ventas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\Ventas.Designer.cs">
-      <DependentUpon>Ventas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cliente\AutosDisponibles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente\AutosDisponibles.Designer.cs">
-      <DependentUpon>AutosDisponibles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cliente\HistorialCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cliente\HistorialCompras.Designer.cs">
-      <DependentUpon>HistorialCompras.cs</DependentUpon>
+    <Compile Include="Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
@@ -85,22 +67,16 @@
     <Compile Include="Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentacionUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Administrador\Autos.resx">
-      <DependentUpon>Autos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Ventas.resx">
-      <DependentUpon>Ventas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\AutosDisponibles.resx">
-      <DependentUpon>AutosDisponibles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\HistorialCompras.resx">
-      <DependentUpon>HistorialCompras.cs</DependentUpon>
+    <Compile Include="TablasAutoexpoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TablasAutoexpoDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
@@ -123,6 +99,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TablasAutoexpoDataSet.xsc">
+      <DependentUpon>TablasAutoexpoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TablasAutoexpoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TablasAutoexpoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TablasAutoexpoDataSet.xss">
+      <DependentUpon>TablasAutoexpoDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

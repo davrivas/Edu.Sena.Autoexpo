@@ -65,6 +65,7 @@
             this.tbNombres.Name = "tbNombres";
             this.tbNombres.Size = new System.Drawing.Size(100, 20);
             this.tbNombres.TabIndex = 1;
+            this.tbNombres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // lblNombres
             // 
@@ -81,6 +82,7 @@
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(100, 20);
             this.tbApellidos.TabIndex = 2;
+            this.tbApellidos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // tbEmail
             // 
@@ -88,6 +90,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 3;
+            this.tbEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // tbTelefono
             // 
@@ -95,6 +98,7 @@
             this.tbTelefono.Name = "tbTelefono";
             this.tbTelefono.Size = new System.Drawing.Size(100, 20);
             this.tbTelefono.TabIndex = 4;
+            this.tbTelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // tbDireccion
             // 
@@ -102,6 +106,7 @@
             this.tbDireccion.Name = "tbDireccion";
             this.tbDireccion.Size = new System.Drawing.Size(204, 20);
             this.tbDireccion.TabIndex = 5;
+            this.tbDireccion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // tbClave
             // 
@@ -110,6 +115,7 @@
             this.tbClave.PasswordChar = '*';
             this.tbClave.Size = new System.Drawing.Size(100, 20);
             this.tbClave.TabIndex = 6;
+            this.tbClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // lblApellidos
             // 
@@ -127,6 +133,7 @@
             this.tbConfimacion.PasswordChar = '*';
             this.tbConfimacion.Size = new System.Drawing.Size(100, 20);
             this.tbConfimacion.TabIndex = 7;
+            this.tbConfimacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterRegistrarse);
             // 
             // lblEmail
             // 
@@ -208,7 +215,7 @@
             this.tbClaveIniciarSesion.PasswordChar = '*';
             this.tbClaveIniciarSesion.Size = new System.Drawing.Size(100, 20);
             this.tbClaveIniciarSesion.TabIndex = 99;
-            this.tbClaveIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbClaveIniciarSesion_KeyDown);
+            this.tbClaveIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterIniciarSesion);
             // 
             // tbEmailIniciarSesion
             // 
@@ -216,7 +223,7 @@
             this.tbEmailIniciarSesion.Name = "tbEmailIniciarSesion";
             this.tbEmailIniciarSesion.Size = new System.Drawing.Size(100, 20);
             this.tbEmailIniciarSesion.TabIndex = 98;
-            this.tbEmailIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbEmailIniciarSesion_KeyDown);
+            this.tbEmailIniciarSesion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OprimirEnterIniciarSesion);
             // 
             // lblIniciarSesion
             // 
@@ -240,13 +247,13 @@
             // 
             // lblAutoexpo
             // 
-            this.lblAutoexpo.AutoSize = true;
             this.lblAutoexpo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutoexpo.Location = new System.Drawing.Point(143, 9);
+            this.lblAutoexpo.Location = new System.Drawing.Point(17, 9);
             this.lblAutoexpo.Name = "lblAutoexpo";
-            this.lblAutoexpo.Size = new System.Drawing.Size(96, 25);
+            this.lblAutoexpo.Size = new System.Drawing.Size(365, 25);
             this.lblAutoexpo.TabIndex = 24;
             this.lblAutoexpo.Text = "Autoexpo";
+            this.lblAutoexpo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Index
             // 

@@ -84,7 +84,7 @@ namespace Edu.Sena.Autoexpo.Logica {
             }
         }
 
-        public int BuscarPorEmailClave(string email, string clave) {
+        public bool BuscarPorEmailClave(string email, string clave) {
             try {
                 Conexion.Abrir();
                 string sql = "SELECT * " +
@@ -106,17 +106,16 @@ namespace Edu.Sena.Autoexpo.Logica {
                         lector["Telefono"].ToString().Trim(),
                         LogicaUtil.RDAO.BuscarPorId(rolId)
                     );
-                    return 1;
+                    return true;
                 } else {
-                    return 0;
+                    return false;
                 }
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
-                return 0;
+                return false;
             } finally {
                 Conexion.Cerrar();
             }
-
         }
     }
 }
