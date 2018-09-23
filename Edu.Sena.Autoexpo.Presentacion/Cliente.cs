@@ -17,5 +17,11 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {
             PresentacionUtil.CerrarSesion(this);
         }
+
+        private void Cliente_Load(object sender, EventArgs e) {
+            // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaAutoDisponible' table. You can move, or remove it, as needed.
+            this.vistaAutoDisponibleTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoDisponible);
+
+        }
     }
 }

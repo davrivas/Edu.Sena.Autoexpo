@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.tabsCliente = new System.Windows.Forms.TabControl();
             this.tabAutosVenta = new System.Windows.Forms.TabPage();
@@ -30,6 +31,12 @@
             this.tabHistorialCompras = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabEditarPerfil = new System.Windows.Forms.TabPage();
+            this.btnCambiarClave = new System.Windows.Forms.Button();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
+            this.lblCambiarClave = new System.Windows.Forms.Label();
+            this.lblEditarPerfil = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
@@ -46,14 +53,24 @@
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.autoexpoVistaDataSet = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSet();
+            this.vistaAutoDisponibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vistaAutoDisponibleTableAdapter = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSetTableAdapters.VistaAutoDisponibleTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroPuertasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsCliente.SuspendLayout();
             this.tabAutosVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabHistorialCompras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabEditarPerfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabsCliente
@@ -80,9 +97,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.placaDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.modeloDataGridViewTextBoxColumn,
+            this.numeroPuertasDataGridViewTextBoxColumn,
+            this.colorDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.vistaAutoDisponibleBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(952, 340);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -107,6 +138,10 @@
             // 
             // tabEditarPerfil
             // 
+            this.tabEditarPerfil.Controls.Add(this.btnCambiarClave);
+            this.tabEditarPerfil.Controls.Add(this.btnEditarPerfil);
+            this.tabEditarPerfil.Controls.Add(this.lblCambiarClave);
+            this.tabEditarPerfil.Controls.Add(this.lblEditarPerfil);
             this.tabEditarPerfil.Controls.Add(this.label1);
             this.tabEditarPerfil.Controls.Add(this.textBox1);
             this.tabEditarPerfil.Controls.Add(this.lblConfirmacion);
@@ -131,6 +166,61 @@
             this.tabEditarPerfil.Text = "Editar perfil";
             this.tabEditarPerfil.UseVisualStyleBackColor = true;
             // 
+            // btnCambiarClave
+            // 
+            this.btnCambiarClave.Location = new System.Drawing.Point(294, 170);
+            this.btnCambiarClave.Name = "btnCambiarClave";
+            this.btnCambiarClave.Size = new System.Drawing.Size(75, 23);
+            this.btnCambiarClave.TabIndex = 35;
+            this.btnCambiarClave.Text = "Cambiar clave";
+            this.btnCambiarClave.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.Location = new System.Drawing.Point(12, 170);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarPerfil.TabIndex = 10;
+            this.btnEditarPerfil.Text = "Editar pefil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = true;
+            // 
+            // lblCambiarClave
+            // 
+            this.lblCambiarClave.AutoSize = true;
+            this.lblCambiarClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarClave.Location = new System.Drawing.Point(291, 17);
+            this.lblCambiarClave.Name = "lblCambiarClave";
+            this.lblCambiarClave.Size = new System.Drawing.Size(110, 17);
+            this.lblCambiarClave.TabIndex = 34;
+            this.lblCambiarClave.Text = "Cambiar clave";
+            // 
+            // lblEditarPerfil
+            // 
+            this.lblEditarPerfil.AutoSize = true;
+            this.lblEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditarPerfil.Location = new System.Drawing.Point(8, 17);
+            this.lblEditarPerfil.Name = "lblEditarPerfil";
+            this.lblEditarPerfil.Size = new System.Drawing.Size(93, 17);
+            this.lblEditarPerfil.TabIndex = 33;
+            this.lblEditarPerfil.Text = "Editar perfil";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(291, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Clave";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(294, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 31;
+            // 
             // lblConfirmacion
             // 
             this.lblConfirmacion.AutoSize = true;
@@ -152,7 +242,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(112, 89);
+            this.lblTelefono.Location = new System.Drawing.Point(115, 89);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblTelefono.TabIndex = 28;
@@ -187,7 +277,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(112, 50);
+            this.lblApellidos.Location = new System.Drawing.Point(115, 50);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(49, 13);
             this.lblApellidos.TabIndex = 25;
@@ -224,7 +314,7 @@
             // 
             // tbApellidos
             // 
-            this.tbApellidos.Location = new System.Drawing.Point(115, 66);
+            this.tbApellidos.Location = new System.Drawing.Point(118, 66);
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(100, 20);
             this.tbApellidos.TabIndex = 18;
@@ -232,7 +322,7 @@
             // lblNombres
             // 
             this.lblNombres.AutoSize = true;
-            this.lblNombres.Location = new System.Drawing.Point(6, 50);
+            this.lblNombres.Location = new System.Drawing.Point(12, 50);
             this.lblNombres.Name = "lblNombres";
             this.lblNombres.Size = new System.Drawing.Size(49, 13);
             this.lblNombres.TabIndex = 19;
@@ -240,7 +330,7 @@
             // 
             // tbNombres
             // 
-            this.tbNombres.Location = new System.Drawing.Point(9, 66);
+            this.tbNombres.Location = new System.Drawing.Point(12, 66);
             this.tbNombres.Name = "tbNombres";
             this.tbNombres.Size = new System.Drawing.Size(100, 20);
             this.tbNombres.TabIndex = 17;
@@ -265,22 +355,68 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // autoexpoVistaDataSet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(291, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Clave";
+            this.autoexpoVistaDataSet.DataSetName = "AutoexpoVistaDataSet";
+            this.autoexpoVistaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox1
+            // vistaAutoDisponibleBindingSource
             // 
-            this.textBox1.Location = new System.Drawing.Point(294, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 31;
+            this.vistaAutoDisponibleBindingSource.DataMember = "VistaAutoDisponible";
+            this.vistaAutoDisponibleBindingSource.DataSource = this.autoexpoVistaDataSet;
+            // 
+            // vistaAutoDisponibleTableAdapter
+            // 
+            this.vistaAutoDisponibleTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // placaDataGridViewTextBoxColumn
+            // 
+            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modeloDataGridViewTextBoxColumn
+            // 
+            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroPuertasDataGridViewTextBoxColumn
+            // 
+            this.numeroPuertasDataGridViewTextBoxColumn.DataPropertyName = "NumeroPuertas";
+            this.numeroPuertasDataGridViewTextBoxColumn.HeaderText = "NumeroPuertas";
+            this.numeroPuertasDataGridViewTextBoxColumn.Name = "numeroPuertasDataGridViewTextBoxColumn";
+            this.numeroPuertasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Cliente
             // 
@@ -293,6 +429,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cliente";
             this.Text = "Cliente - Autoexpo";
+            this.Load += new System.EventHandler(this.Cliente_Load);
             this.tabsCliente.ResumeLayout(false);
             this.tabAutosVenta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -300,6 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabEditarPerfil.ResumeLayout(false);
             this.tabEditarPerfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,5 +470,19 @@
         private System.Windows.Forms.TextBox tbNombres;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblCambiarClave;
+        private System.Windows.Forms.Label lblEditarPerfil;
+        private System.Windows.Forms.Button btnCambiarClave;
+        private System.Windows.Forms.Button btnEditarPerfil;
+        private AutoexpoVistaDataSet autoexpoVistaDataSet;
+        private System.Windows.Forms.BindingSource vistaAutoDisponibleBindingSource;
+        private AutoexpoVistaDataSetTableAdapters.VistaAutoDisponibleTableAdapter vistaAutoDisponibleTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroPuertasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
