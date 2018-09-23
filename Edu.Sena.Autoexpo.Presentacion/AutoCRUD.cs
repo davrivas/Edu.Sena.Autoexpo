@@ -19,5 +19,38 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.marcaTableAdapter.Fill(this.tablasDataSet.Marca);
 
         }
+
+        public void MostrarAgregar() {
+            this.Show();
+            lblAutoCRUD.Text = "Agregar auto";
+            MostrarControles();
+            btnCRUD.Text = "Agregar auto";
+        }
+
+        public void MostrarEditarEliminar(string accion) {
+            this.Show();
+            lblAutoCRUD.Text = accion + " auto";
+            lblId.Show();
+            tbId.Show();
+            btnBuscar.Show();
+        }
+
+        public void MostrarControles() {
+            lblPlaca.Show();
+            tbPlaca.Show();
+            lblPuertas.Show();
+            cbPuertas.Show();
+            lblColor.Show();
+            tbColor.Show();
+            lblPrecio.Show();
+            tbPrecio.Show();
+            lblMarca.Show();
+            cbMarca.Show();
+            btnCRUD.Show();
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e) {
+
+        }
     }
 }

@@ -29,15 +29,17 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                     MessageBox.Show("Hola " + LogicaUtil.Sesion.Nombres + " " +
                         LogicaUtil.Sesion.Apellidos,
                     LogicaUtil.Sesion.Rol.Rol);
+                    tbEmailIniciarSesion.Text = "";
+                    tbClaveIniciarSesion.Text = "";
                     switch (LogicaUtil.Sesion.Rol.Id) {
                         case 1:
-                            Administrador ventana = new Administrador();
-                            ventana.Show();
+                            Administrador ventanaAdministrador = new Administrador();
+                            ventanaAdministrador.Show();
                             this.Hide();
                             break;
                         case 2:
-                            Administrador a = new Administrador();
-                            a.Show();
+                            Cliente ventanaCliente = new Cliente();
+                            ventanaCliente.Show();
                             this.Hide();
                             break;
                     }

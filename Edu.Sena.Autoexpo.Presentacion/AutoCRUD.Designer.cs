@@ -30,13 +30,13 @@
             this.tbId = new System.Windows.Forms.TextBox();
             this.btnCRUD = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbPlaca = new System.Windows.Forms.TextBox();
             this.cbPuertas = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbColor = new System.Windows.Forms.TextBox();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.cbMarca = new System.Windows.Forms.ComboBox();
-            this.tablasDataSet = new Edu.Sena.Autoexpo.Presentacion.TablasDataSet();
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tablasDataSet = new Edu.Sena.Autoexpo.Presentacion.TablasDataSet();
             this.marcaTableAdapter = new Edu.Sena.Autoexpo.Presentacion.TablasDataSetTableAdapters.MarcaTableAdapter();
             this.lblPlaca = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
@@ -45,8 +45,8 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblColor = new System.Windows.Forms.Label();
             this.cbModelo = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.tablasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAutoCRUD
@@ -94,13 +94,14 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
-            // textBox1
+            // tbPlaca
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbPlaca.Location = new System.Drawing.Point(86, 94);
+            this.tbPlaca.Name = "tbPlaca";
+            this.tbPlaca.Size = new System.Drawing.Size(131, 20);
+            this.tbPlaca.TabIndex = 5;
             // 
             // cbPuertas
             // 
@@ -115,12 +116,12 @@
             this.cbPuertas.Size = new System.Drawing.Size(131, 21);
             this.cbPuertas.TabIndex = 7;
             // 
-            // textBox3
+            // tbColor
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
-            this.textBox3.TabIndex = 8;
+            this.tbColor.Location = new System.Drawing.Point(86, 174);
+            this.tbColor.Name = "tbColor";
+            this.tbColor.Size = new System.Drawing.Size(131, 20);
+            this.tbColor.TabIndex = 8;
             // 
             // tbPrecio
             // 
@@ -140,15 +141,15 @@
             this.cbMarca.TabIndex = 10;
             this.cbMarca.ValueMember = "MarcaId";
             // 
-            // tablasDataSet
-            // 
-            this.tablasDataSet.DataSetName = "TablasDataSet";
-            this.tablasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // marcaBindingSource
             // 
             this.marcaBindingSource.DataMember = "Marca";
             this.marcaBindingSource.DataSource = this.tablasDataSet;
+            // 
+            // tablasDataSet
+            // 
+            this.tablasDataSet.DataSetName = "TablasDataSet";
+            this.tablasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // marcaTableAdapter
             // 
@@ -236,9 +237,9 @@
             this.Controls.Add(this.lblPlaca);
             this.Controls.Add(this.cbMarca);
             this.Controls.Add(this.tbPrecio);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbColor);
             this.Controls.Add(this.cbPuertas);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPlaca);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCRUD);
             this.Controls.Add(this.tbId);
@@ -250,8 +251,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoCRUD";
             this.Load += new System.EventHandler(this.AutoCRUD_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tablasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,9 +265,9 @@
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Button btnCRUD;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbPlaca;
         private System.Windows.Forms.ComboBox cbPuertas;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbColor;
         private System.Windows.Forms.TextBox tbPrecio;
         private System.Windows.Forms.ComboBox cbMarca;
         private TablasDataSet tablasDataSet;

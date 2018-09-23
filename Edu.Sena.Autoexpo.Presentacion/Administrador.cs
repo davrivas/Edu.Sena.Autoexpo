@@ -10,8 +10,19 @@ using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Presentacion {
     public partial class Administrador : Form {
+        private AutoCRUD crud = new AutoCRUD();
+
         public Administrador() {
             InitializeComponent();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams {
+            get {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         private void Administrador_Load(object sender, EventArgs e) {
@@ -26,6 +37,14 @@ namespace Edu.Sena.Autoexpo.Presentacion {
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {
             PresentacionUtil.ConfirmarCerrarSesion(this);
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e) {
+            crud.MostrarAgregar();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e) {
+            crud.MostrarEditarEliminar("Editar");
         }
     }
 }

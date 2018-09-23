@@ -13,7 +13,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Index());
+            Application.Run(PresentacionUtil.Index);
         }
     }
 }

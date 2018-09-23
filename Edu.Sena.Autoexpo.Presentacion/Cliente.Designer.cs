@@ -28,6 +28,15 @@
             this.tabsCliente = new System.Windows.Forms.TabControl();
             this.tabAutosVenta = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroPuertasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vistaAutoDisponibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autoexpoVistaDataSet = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSet();
             this.tabHistorialCompras = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabEditarPerfil = new System.Windows.Forms.TabPage();
@@ -53,24 +62,15 @@
             this.tbNombres = new System.Windows.Forms.TextBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.autoexpoVistaDataSet = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSet();
-            this.vistaAutoDisponibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaAutoDisponibleTableAdapter = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSetTableAdapters.VistaAutoDisponibleTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroPuertasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsCliente.SuspendLayout();
             this.tabAutosVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).BeginInit();
             this.tabHistorialCompras.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabEditarPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabsCliente
@@ -116,6 +116,65 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(952, 340);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // placaDataGridViewTextBoxColumn
+            // 
+            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modeloDataGridViewTextBoxColumn
+            // 
+            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeroPuertasDataGridViewTextBoxColumn
+            // 
+            this.numeroPuertasDataGridViewTextBoxColumn.DataPropertyName = "NumeroPuertas";
+            this.numeroPuertasDataGridViewTextBoxColumn.HeaderText = "NumeroPuertas";
+            this.numeroPuertasDataGridViewTextBoxColumn.Name = "numeroPuertasDataGridViewTextBoxColumn";
+            this.numeroPuertasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vistaAutoDisponibleBindingSource
+            // 
+            this.vistaAutoDisponibleBindingSource.DataMember = "VistaAutoDisponible";
+            this.vistaAutoDisponibleBindingSource.DataSource = this.autoexpoVistaDataSet;
+            // 
+            // autoexpoVistaDataSet
+            // 
+            this.autoexpoVistaDataSet.DataSetName = "AutoexpoVistaDataSet";
+            this.autoexpoVistaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabHistorialCompras
             // 
@@ -338,7 +397,7 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.AutoSize = true;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(97, 384);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(890, 379);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(78, 23);
             this.btnCerrarSesion.TabIndex = 9;
@@ -355,68 +414,9 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
             // 
-            // autoexpoVistaDataSet
-            // 
-            this.autoexpoVistaDataSet.DataSetName = "AutoexpoVistaDataSet";
-            this.autoexpoVistaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vistaAutoDisponibleBindingSource
-            // 
-            this.vistaAutoDisponibleBindingSource.DataMember = "VistaAutoDisponible";
-            this.vistaAutoDisponibleBindingSource.DataSource = this.autoexpoVistaDataSet;
-            // 
             // vistaAutoDisponibleTableAdapter
             // 
             this.vistaAutoDisponibleTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // placaDataGridViewTextBoxColumn
-            // 
-            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
-            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
-            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
-            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modeloDataGridViewTextBoxColumn
-            // 
-            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
-            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeroPuertasDataGridViewTextBoxColumn
-            // 
-            this.numeroPuertasDataGridViewTextBoxColumn.DataPropertyName = "NumeroPuertas";
-            this.numeroPuertasDataGridViewTextBoxColumn.HeaderText = "NumeroPuertas";
-            this.numeroPuertasDataGridViewTextBoxColumn.Name = "numeroPuertasDataGridViewTextBoxColumn";
-            this.numeroPuertasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Cliente
             // 
@@ -433,12 +433,12 @@
             this.tabsCliente.ResumeLayout(false);
             this.tabAutosVenta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).EndInit();
             this.tabHistorialCompras.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabEditarPerfil.ResumeLayout(false);
             this.tabEditarPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.autoexpoVistaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaAutoDisponibleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

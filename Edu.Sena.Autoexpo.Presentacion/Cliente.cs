@@ -10,12 +10,23 @@ using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Presentacion {
     public partial class Cliente : Form {
+        private ComprarAuto compra = new ComprarAuto();
+
         public Cliente() {
             InitializeComponent();
         }
 
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams {
+            get {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {
-            PresentacionUtil.CerrarSesion(this);
+            PresentacionUtil.ConfirmarCerrarSesion(this);
         }
 
         private void Cliente_Load(object sender, EventArgs e) {

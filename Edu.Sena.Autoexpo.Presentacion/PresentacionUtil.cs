@@ -10,9 +10,11 @@ namespace Edu.Sena.Autoexpo.Presentacion {
     public class PresentacionUtil {
         private static Index index = new Index();
 
+        public static Index Index { get => index; set => index = value; }
+
         public static void CerrarSesion(Form este) {
             LogicaUtil.Sesion = null;
-            index.Show();
+            Index.Show();
             este.Close();
         }
 

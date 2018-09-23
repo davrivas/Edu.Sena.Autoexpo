@@ -1,4 +1,6 @@
-﻿namespace Edu.Sena.Autoexpo.Presentacion {
+﻿using System.Windows.Forms;
+
+namespace Edu.Sena.Autoexpo.Presentacion {
     partial class ComprarAuto {
         /// <summary>
         /// Required designer variable.
