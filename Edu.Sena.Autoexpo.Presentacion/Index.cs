@@ -36,7 +36,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                             this.Hide();
                             break;
                         case 2:
-                            Cliente a = new Cliente();
+                            Administrador a = new Administrador();
                             a.Show();
                             this.Hide();
                             break;

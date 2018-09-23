@@ -13,5 +13,9 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         public Cliente() {
             InitializeComponent();
         }
+
+        private void BtnCerrarSesion_Click(object sender, EventArgs e) {
+            PresentacionUtil.CerrarSesion(this);
+        }
     }
 }

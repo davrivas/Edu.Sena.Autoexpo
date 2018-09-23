@@ -13,11 +13,5 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         public Administrador() {
             InitializeComponent();
         }
-
-        private void Administrador_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'tablasAutoexpoDataSet.Venta' table. You can move, or remove it, as needed.
-            //this.ventaTableAdapter.Fill(this.tablasAutoexpoDataSet.Venta);
-
-        }
     }
 }
