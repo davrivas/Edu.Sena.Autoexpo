@@ -16,6 +16,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
 
         public AutoCRUD() {
             InitializeComponent();
+            OcultarTodo();
         }
 
         private void AutoCRUD_Load(object sender, EventArgs e) {
@@ -24,36 +25,53 @@ namespace Edu.Sena.Autoexpo.Presentacion {
 
         }
 
+        private void OcultarTodo() {
+            lblId.Hide();
+            tbId.Hide();
+            btnBuscar.Hide();
+            OcultarEtiquetasControles();
+        }
+
         public void MostrarAgregar() {
+            this.Text = "Agregar auto";
             lblAutoCRUD.Text = "Agregar auto";
+            MostrarEtiquetas();
             MostrarControles();
             btnCRUD.Text = "Agregar auto";
+            btnCRUD.Show();
         }
 
         public void MostrarEditarEliminar(string accion) {
+            this.Text = accion + " auto";
             lblAutoCRUD.Text = accion + " auto";
             lblId.Show();
             tbId.Show();
             btnBuscar.Show();
         }
 
-        private void MostrarControles() {
+        private void MostrarEtiquetas() {
             lblPlaca.Show();
-            tbPlaca.Show();
+            lblModelo.Show();
             lblPuertas.Show();
-            cbPuertas.Show();
             lblColor.Show();
-            tbColor.Show();
             lblPrecio.Show();
-            tbPrecio.Show();
             lblMarca.Show();
-            cbMarca.Show();
-            btnCRUD.Show();
         }
 
-        private void OcultarControles() {
+        private void MostrarControles() {
+            tbPlaca.Show();
+            cbModelo.Show();
+            cbPuertas.Show();
+            tbColor.Show();
+            tbPrecio.Show();
+            cbMarca.Show();
+        }
+
+        private void OcultarEtiquetasControles() {
             lblPlaca.Hide();
             tbPlaca.Hide();
+            lblModelo.Hide();
+            cbModelo.Hide();
             lblPuertas.Hide();
             cbPuertas.Hide();
             lblColor.Hide();
@@ -77,22 +95,77 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         private void BtnBuscar_Click(object sender, EventArgs e) {
             string autoIdString = tbId.Text.Trim();
             if (autoIdString.Equals("")) {
-                OcultarControles();
+                OcultarEtiquetasControles();
+                MessageBox.Show("Debe digitar el Id del auto");
             } else {
                 int id = Convert.ToInt32(autoIdString);
                 auto = LogicaUtil.ADAO.BuscarPorId(id);
 
                 if (auto != null) {
                     if (lblAutoCRUD.Text.Trim().Equals("Editar auto")) {
+                        MostrarEtiquetas();
                         MostrarControles();
                         ActualizarControles(auto);
-                    } /*else {
-                        
-                    }*/
+                    } else {
+                        MostrarEtiquetas();
+                        lblPlaca.Text = "Placa: " + auto.Placa;
+                        lblModelo.Text = "Modelo: " + auto.Modelo;
+                        lblPuertas.Text = "# de puertas: " + auto.NumeroPuertas;
+                        lblColor.Text = "Color: " + auto.Color;
+                        lblPrecio.Text = "Precio: " + auto.Precio;
+                        lblMarca.Text = "Marca: " + auto.Marca.Marca;
+                        btnCRUD.Text = "Eliminar auto";
+                    }
                 } else {
-                    OcultarControles();
+                    OcultarEtiquetasControles();
                 }                
             }
+        }
+
+        private void BtnCRUD_Click(object sender, EventArgs e) {
+            string placa = tbPlaca.Text.Trim(),
+                modelo = cbModelo.SelectedItem.ToString().Trim(),
+                puertas = cbPuertas.SelectedItem.ToString().Trim(),
+                color = tbColor.Text.Trim(),
+                precio = tbPrecio.Text.Trim();
+            int marcaId = Convert.ToInt32(cbMarca.SelectedValue.ToString().Trim());
+            
+            if ((tbPlaca.Text.Equals("") || cbModelo.SelectedItem.Equals("") ||
+                cbPuertas.SelectedItem.Equals("") || tbColor.Text.Equals("") ||
+                tbPrecio.Text.Equals(""))) {
+                MessageBox.Show("Llene todos los campos", "ERROR");
+            } else {
+                switch (btnCRUD.Text) {
+                    case "Agregar auto":
+                        auto = new AutoDTO {
+                            Placa = placa,
+                            Modelo = modelo,
+                            NumeroPuertas = Convert.ToInt32(puertas),
+                            Color = color,
+                            Precio = Convert.ToDouble(precio),
+                            Marca = LogicaUtil.MDAO.BuscarPorId(marcaId)
+                        };
+                        LogicaUtil.ADAO.Ingresar(auto);
+                        break;
+                    case "Editar auto":
+                        LogicaUtil.ADAO.Editar(auto);
+                        break;
+                }
+            }
+
+            switch (btnCRUD.Text) {
+                case "Eliminar auto":
+                    DialogResult confirmar = MessageBox.Show("¿Desea cerrar sesión?", "Cerrar sesión",
+                        MessageBoxButtons.YesNo);
+                    if (confirmar == DialogResult.Yes) {
+                        LogicaUtil.ADAO.Eliminar(auto);
+                    } else {
+                        return;
+                    }
+                    break;
+            }
+
+            this.Close();
         }
     }
 }

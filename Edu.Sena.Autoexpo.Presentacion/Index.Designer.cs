@@ -47,6 +47,7 @@
             this.lblIniciarSesion = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.lblAutoexpo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRegistrarse
@@ -255,11 +256,23 @@
             this.lblAutoexpo.Text = "Autoexpo";
             this.lblAutoexpo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(16, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 48);
+            this.button1.TabIndex = 100;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ConfirmarSalida);
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 269);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblAutoexpo);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblIniciarSesion);
@@ -288,7 +301,6 @@
             this.Name = "Index";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autoexpo";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Index_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +331,7 @@
         private System.Windows.Forms.Label lblIniciarSesion;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label lblAutoexpo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

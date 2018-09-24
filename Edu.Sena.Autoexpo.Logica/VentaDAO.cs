@@ -5,11 +5,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Logica {
     public class VentaDAO : IDAO<VentaDTO> {
-        private readonly double porcentajeIVA = 0.19;
-
         public VentaDAO() {
         }
 
@@ -58,7 +57,28 @@ namespace Edu.Sena.Autoexpo.Logica {
         }
 
         public void Ingresar(VentaDTO obj) {
-            throw new NotImplementedException();
+            try {
+                Conexion.Abrir();
+                string sql = "INSERT INTO Usuario VALUES(" +
+                    "'" + obj.Fecha.ToShortDateString().Trim() + " " + obj.Fecha.ToShortTimeString().Trim() + "', " +
+                    "'" + obj.Iva + "', " +
+                    "'" + obj.Total + "', " +
+                    "'" + obj.Cliente.Id + "', " +
+                    "'" + obj.Auto.Id + ")";
+                SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
+                int cont = comando.ExecuteNonQuery();
+
+                if (cont == 1) {
+                    MessageBox.Show("Registro satisfactorio");
+                } else {
+                    MessageBox.Show("No se pudo realizar registro", "ERROR");
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e.StackTrace);
+                MessageBox.Show("No se pudo realizar registro", "ERROR");
+            } finally {
+                Conexion.Cerrar();
+            }
         }
     }
 }

@@ -34,5 +34,10 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.vistaAutoDisponibleTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoDisponible);
 
         }
+
+        private void BtnComprar_Click(object sender, EventArgs e) {
+            ComprarAuto compra = new ComprarAuto();
+            compra.Show();
+        }
     }
 }

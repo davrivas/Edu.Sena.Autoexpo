@@ -47,6 +47,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // tbId
             // 
@@ -54,7 +55,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(100, 20);
             this.tbId.TabIndex = 7;
-            this.tbId.Visible = false;
             // 
             // lblId
             // 
@@ -64,7 +64,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblId.Size = new System.Drawing.Size(16, 13);
             this.lblId.TabIndex = 6;
             this.lblId.Text = "Id";
-            this.lblId.Visible = false;
             // 
             // lblComprar
             // 
@@ -84,6 +83,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblPlaca.Size = new System.Drawing.Size(40, 13);
             this.lblPlaca.TabIndex = 9;
             this.lblPlaca.Text = "Placa: ";
+            this.lblPlaca.Visible = false;
             // 
             // lblModelo
             // 
@@ -93,6 +93,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblModelo.Size = new System.Drawing.Size(48, 13);
             this.lblModelo.TabIndex = 10;
             this.lblModelo.Text = "Modelo: ";
+            this.lblModelo.Visible = false;
             // 
             // lblPuertas
             // 
@@ -102,6 +103,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblPuertas.Size = new System.Drawing.Size(103, 13);
             this.lblPuertas.TabIndex = 11;
             this.lblPuertas.Text = "Número de puertas: ";
+            this.lblPuertas.Visible = false;
             // 
             // lblColor
             // 
@@ -111,6 +113,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblColor.Size = new System.Drawing.Size(37, 13);
             this.lblColor.TabIndex = 12;
             this.lblColor.Text = "Color: ";
+            this.lblColor.Visible = false;
             // 
             // lblPrecio
             // 
@@ -120,6 +123,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblPrecio.Size = new System.Drawing.Size(49, 13);
             this.lblPrecio.TabIndex = 13;
             this.lblPrecio.Text = "Precio: $";
+            this.lblPrecio.Visible = false;
             // 
             // lblMarca
             // 
@@ -129,6 +133,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.lblMarca.Size = new System.Drawing.Size(43, 13);
             this.lblMarca.TabIndex = 14;
             this.lblMarca.Text = "Marca: ";
+            this.lblMarca.Visible = false;
             // 
             // btnComprar
             // 
@@ -138,6 +143,8 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.btnComprar.TabIndex = 15;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Visible = false;
+            this.btnComprar.Click += new System.EventHandler(this.BtnComprar_Click);
             // 
             // ComprarAuto
             // 

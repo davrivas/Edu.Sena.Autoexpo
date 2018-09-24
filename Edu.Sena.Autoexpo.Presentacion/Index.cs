@@ -12,8 +12,20 @@ using System.Windows.Forms;
 
 namespace Edu.Sena.Autoexpo.Presentacion {
     public partial class Index : Form {
+        private Administrador ventanaAdministrador;
+        private Cliente ventanaCliente;
+
         public Index() {
             InitializeComponent();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams {
+            get {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
 
         private void IniciarSesion() {
@@ -33,12 +45,12 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                     tbClaveIniciarSesion.Text = "";
                     switch (LogicaUtil.Sesion.Rol.Id) {
                         case 1:
-                            Administrador ventanaAdministrador = new Administrador();
+                            ventanaAdministrador = new Administrador();
                             ventanaAdministrador.Show();
                             this.Hide();
                             break;
                         case 2:
-                            Cliente ventanaCliente = new Cliente();
+                            ventanaCliente = new Cliente();
                             ventanaCliente.Show();
                             this.Hide();
                             break;
@@ -110,8 +122,14 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             Registrarse();
         }
 
-        private void Index_FormClosed(object sender, FormClosedEventArgs e) {
-            Application.Exit();
+        private void ConfirmarSalida(object sender, EventArgs e) {
+            DialogResult salir = MessageBox.Show("¿Salir de Autoexpo?", "Autoexpo",
+            MessageBoxButtons.YesNo);
+            if (salir == DialogResult.Yes) {
+                Application.Exit();
+            } else {
+                return;
+            }
         }
     }
 }

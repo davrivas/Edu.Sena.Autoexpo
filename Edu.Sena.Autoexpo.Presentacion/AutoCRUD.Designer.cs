@@ -85,6 +85,7 @@
             this.btnCRUD.TabIndex = 3;
             this.btnCRUD.Text = "CRUD";
             this.btnCRUD.UseVisualStyleBackColor = true;
+            this.btnCRUD.Click += new System.EventHandler(this.BtnCRUD_Click);
             // 
             // btnBuscar
             // 
@@ -218,6 +219,16 @@
             // cbModelo
             // 
             this.cbModelo.FormattingEnabled = true;
+            this.cbModelo.Items.AddRange(new object[] {
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010"});
             this.cbModelo.Location = new System.Drawing.Point(86, 123);
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(131, 21);

@@ -32,7 +32,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             this.vistaAutoCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoCompleto);
             // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaVentaCompleto' table. You can move, or remove it, as needed.
             this.vistaVentaCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaVentaCompleto);
-
         }
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {
@@ -45,13 +44,13 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             crud.MostrarAgregar();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e) {
+        private void BtnEditar_Click(object sender, EventArgs e) {
             crud = new AutoCRUD();
             crud.Show();
             crud.MostrarEditarEliminar("Editar");
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e) {
+        private void BtnEliminar_Click(object sender, EventArgs e) {
             crud = new AutoCRUD();
             crud.Show();
             crud.MostrarEditarEliminar("Eliminar");
