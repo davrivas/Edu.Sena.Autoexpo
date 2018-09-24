@@ -18,7 +18,8 @@ namespace Edu.Sena.Autoexpo.Datos {
         public AutoDTO() {
         }
 
-        public AutoDTO(string placa, string modelo, int numeroPuertas, string color, double precio, MarcaDTO marca, EstadoAutoDTO estado) {
+        public AutoDTO(int id, string placa, string modelo, int numeroPuertas, string color, double precio, MarcaDTO marca, EstadoAutoDTO estado) {
+            this.Id = id;
             this.Placa = placa;
             this.Modelo = modelo;
             this.NumeroPuertas = numeroPuertas;

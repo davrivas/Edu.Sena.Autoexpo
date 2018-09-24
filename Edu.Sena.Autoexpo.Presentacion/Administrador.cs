@@ -25,13 +25,21 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             }
         }
 
+        public void ActualizarTablas() {
+            try {
+                this.vistaClienteTableAdapter.ClearBeforeFill = true;
+                this.vistaClienteTableAdapter.Fill(this.autoexpoVistaDataSet.VistaCliente);
+                this.vistaAutoCompletoTableAdapter.ClearBeforeFill = true;
+                this.vistaAutoCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoCompleto);
+                this.vistaVentaCompletoTableAdapter.ClearBeforeFill = true;
+                this.vistaVentaCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaVentaCompleto);
+            } catch (Exception e) {
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+
         private void Administrador_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaCliente' table. You can move, or remove it, as needed.
-            this.vistaClienteTableAdapter.Fill(this.autoexpoVistaDataSet.VistaCliente);
-            // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaAutoCompleto' table. You can move, or remove it, as needed.
-            this.vistaAutoCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoCompleto);
-            // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaVentaCompleto' table. You can move, or remove it, as needed.
-            this.vistaVentaCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaVentaCompleto);
+            ActualizarTablas();
         }
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {

@@ -460,7 +460,9 @@
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnComprar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente - Autoexpo";
             this.Load += new System.EventHandler(this.Cliente_Load);
             this.tabsCliente.ResumeLayout(false);

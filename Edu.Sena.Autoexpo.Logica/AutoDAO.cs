@@ -25,6 +25,7 @@ namespace Edu.Sena.Autoexpo.Logica {
                     int marcaId = Convert.ToInt32(lector["MarcaId"].ToString().Trim()),
                         estadoAutoId = Convert.ToInt32(lector["EstadoAutoId"].ToString().Trim());
                     AutoDTO auto = new AutoDTO(
+                        Convert.ToInt32(lector["AutoId"].ToString().Trim()),
                         lector["Placa"].ToString().Trim(),
                         lector["Modelo"].ToString().Trim(),
                         Convert.ToInt32(lector["NumeroPuertas"].ToString().Trim()),
@@ -162,6 +163,7 @@ namespace Edu.Sena.Autoexpo.Logica {
                     int marcaId = Convert.ToInt32(lector["MarcaId"].ToString().Trim()),
                         estadoAutoId = Convert.ToInt32(lector["EstadoAutoId"].ToString().Trim());
                     AutoDTO auto = new AutoDTO(
+                        Convert.ToInt32(lector["AutoId"].ToString().Trim()),
                         lector["Placa"].ToString().Trim(),
                         lector["Modelo"].ToString().Trim(),
                         Convert.ToInt32(lector["NumeroPuertas"].ToString().Trim()),

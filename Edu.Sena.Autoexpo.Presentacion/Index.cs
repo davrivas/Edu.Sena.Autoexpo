@@ -28,6 +28,9 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             }
         }
 
+        public Administrador VentanaAdministrador { get => ventanaAdministrador; set => ventanaAdministrador = value; }
+        public Cliente VentanaCliente { get => ventanaCliente; set => ventanaCliente = value; }
+
         private void IniciarSesion() {
             string email = tbEmailIniciarSesion.Text.Trim(),
                 clave = tbClaveIniciarSesion.Text.Trim();
@@ -45,13 +48,13 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                     tbClaveIniciarSesion.Text = "";
                     switch (LogicaUtil.Sesion.Rol.Id) {
                         case 1:
-                            ventanaAdministrador = new Administrador();
-                            ventanaAdministrador.Show();
+                            VentanaAdministrador = new Administrador();
+                            VentanaAdministrador.Show();
                             this.Hide();
                             break;
                         case 2:
-                            ventanaCliente = new Cliente();
-                            ventanaCliente.Show();
+                            VentanaCliente = new Cliente();
+                            VentanaCliente.Show();
                             this.Hide();
                             break;
                     }

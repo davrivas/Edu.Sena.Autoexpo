@@ -37,13 +37,14 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             lblAutoCRUD.Text = "Agregar auto";
             MostrarEtiquetas();
             MostrarControles();
-            btnCRUD.Text = "Agregar auto";
             btnCRUD.Show();
+            btnCRUD.Text = "Agregar auto";
         }
 
         public void MostrarEditarEliminar(string accion) {
             this.Text = accion + " auto";
             lblAutoCRUD.Text = accion + " auto";
+            btnCRUD.Text = accion + " auto";
             lblId.Show();
             tbId.Show();
             btnBuscar.Show();
@@ -85,11 +86,11 @@ namespace Edu.Sena.Autoexpo.Presentacion {
 
         private void ActualizarControles(AutoDTO auto) {
             tbPlaca.Text = auto.Placa;
-            cbPuertas.SelectedValue = auto.NumeroPuertas;
+            cbPuertas.SelectedText = Convert.ToString(auto.NumeroPuertas);
             tbColor.Text = auto.Color;
-            tbPrecio.Text = auto.Precio.ToString();
+            tbPrecio.Text = Convert.ToString(auto.Precio);
             cbMarca.SelectedValue = auto.Marca.Id;
-            btnCRUD.Text = "Editar auto";
+            cbModelo.SelectedText = auto.Modelo;
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e) {
@@ -102,6 +103,8 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                 auto = LogicaUtil.ADAO.BuscarPorId(id);
 
                 if (auto != null) {
+                    btnCRUD.Show();
+
                     if (lblAutoCRUD.Text.Trim().Equals("Editar auto")) {
                         MostrarEtiquetas();
                         MostrarControles();
@@ -114,7 +117,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                         lblColor.Text = "Color: " + auto.Color;
                         lblPrecio.Text = "Precio: " + auto.Precio;
                         lblMarca.Text = "Marca: " + auto.Marca.Marca;
-                        btnCRUD.Text = "Eliminar auto";
                     }
                 } else {
                     OcultarEtiquetasControles();
@@ -164,7 +166,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                     }
                     break;
             }
-
+            PresentacionUtil.Index.VentanaAdministrador.ActualizarTablas();
             this.Close();
         }
     }

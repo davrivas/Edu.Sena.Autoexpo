@@ -25,14 +25,21 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             }
         }
 
+        public void ActualizarTablas() {
+            try {
+                this.vistaAutoDisponibleTableAdapter.ClearBeforeFill = true;
+                this.vistaAutoDisponibleTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoDisponible);
+            } catch (Exception e) {
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+
         private void BtnCerrarSesion_Click(object sender, EventArgs e) {
             PresentacionUtil.ConfirmarCerrarSesion(this);
         }
 
         private void Cliente_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'autoexpoVistaDataSet.VistaAutoDisponible' table. You can move, or remove it, as needed.
-            this.vistaAutoDisponibleTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoDisponible);
-
+            ActualizarTablas();
         }
 
         private void BtnComprar_Click(object sender, EventArgs e) {

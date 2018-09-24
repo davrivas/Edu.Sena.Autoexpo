@@ -32,7 +32,7 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                 MessageBox.Show("Ingrese el Id del auto a comprar");
             } else {
                 int autoId = Convert.ToInt32(autoIdString);
-                auto = LogicaUtil.ADAO.BuscarPorId(autoId);
+                auto = LogicaUtil.ADAO.BuscarDisponible(autoId);
 
                 if (auto != null) {
                     lblColor.Show();
@@ -64,7 +64,8 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             };
 
             LogicaUtil.VDAO.Ingresar(nuevaVenta);
-            LogicaUtil.ADAO.Vender(auto);
+            //LogicaUtil.ADAO.Vender(auto);
+            PresentacionUtil.Index.VentanaCliente.ActualizarTablas();
             this.Close();
         }
     }

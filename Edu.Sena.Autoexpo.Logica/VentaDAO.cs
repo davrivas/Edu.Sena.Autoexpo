@@ -60,12 +60,13 @@ namespace Edu.Sena.Autoexpo.Logica {
             try {
                 Conexion.Abrir();
                 string sql = "INSERT INTO Usuario VALUES(" +
-                    "'" + obj.Fecha.ToShortDateString().Trim() + " " + obj.Fecha.ToShortTimeString().Trim() + "', " +
+                    "@fecha, " +
                     "'" + obj.Iva + "', " +
                     "'" + obj.Total + "', " +
                     "'" + obj.Cliente.Id + "', " +
                     "'" + obj.Auto.Id + ")";
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
+                comando.Parameters.AddWithValue("@fecha", obj.Fecha);
                 int cont = comando.ExecuteNonQuery();
 
                 if (cont == 1) {
