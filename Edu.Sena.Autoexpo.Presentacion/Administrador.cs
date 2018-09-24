@@ -31,8 +31,10 @@ namespace Edu.Sena.Autoexpo.Presentacion {
                 this.vistaClienteTableAdapter.Fill(this.autoexpoVistaDataSet.VistaCliente);
                 this.vistaAutoCompletoTableAdapter.ClearBeforeFill = true;
                 this.vistaAutoCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaAutoCompleto);
-                this.vistaVentaCompletoTableAdapter.ClearBeforeFill = true;
-                this.vistaVentaCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaVentaCompleto);
+                //this.vistaVentaCompletoTableAdapter.ClearBeforeFill = true;
+                //this.vistaVentaCompletoTableAdapter.Fill(this.autoexpoVistaDataSet.VistaVentaCompleto);
+                this.vistaVentaCompletoTableAdapter1.ClearBeforeFill = true;
+                this.vistaVentaCompletoTableAdapter1.Fill(this.ventaDataSet.VistaVentaCompleto);
             } catch (Exception e) {
                 Console.WriteLine(e.StackTrace);
             }

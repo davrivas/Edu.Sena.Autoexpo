@@ -26,7 +26,6 @@ namespace Edu.Sena.Autoexpo.Logica {
                         placaAuto = Convert.ToInt32(lector["PlacaAuto"].ToString().Trim());
                     VentaDTO auto = new VentaDTO(
                         Convert.ToInt32(lector["VentaId"].ToString().Trim()),
-                        Convert.ToDateTime(lector["Fecha"].ToString().Trim()),
                         Convert.ToDouble(lector["Iva"].ToString().Trim()),
                         Convert.ToDouble(lector["Total"].ToString().Trim()),
                         LogicaUtil.UDAO.BuscarPorId(clienteId),
@@ -59,18 +58,19 @@ namespace Edu.Sena.Autoexpo.Logica {
         public void Ingresar(VentaDTO obj) {
             try {
                 Conexion.Abrir();
-                string sql = "INSERT INTO Usuario VALUES(" +
-                    "@fecha, " +
-                    "'" + obj.Iva + "', " +
-                    "'" + obj.Total + "', " +
-                    "'" + obj.Cliente.Id + "', " +
-                    "'" + obj.Auto.Id + ")";
+                //DateTime now = new DateTime();
+                //string cadena = "INSERT INTO usuario VALUES ("1", "21323123", "234332134", "2", "1")";
+                string sql = "INSERT INTO Venta VALUES(" +
+                    obj.Iva + ", " +
+                    obj.Total + ", " +
+                    obj.Cliente.Id + ", " +
+                    obj.Auto.Id + ")";
                 SqlCommand comando = new SqlCommand(sql, Conexion.ConexionObj);
-                comando.Parameters.AddWithValue("@fecha", obj.Fecha);
                 int cont = comando.ExecuteNonQuery();
 
                 if (cont == 1) {
                     MessageBox.Show("Registro satisfactorio");
+                    LogicaUtil.ADAO.Vender(obj.Auto);
                 } else {
                     MessageBox.Show("No se pudo realizar registro", "ERROR");
                 }

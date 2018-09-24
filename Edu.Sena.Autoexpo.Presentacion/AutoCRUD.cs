@@ -125,47 +125,52 @@ namespace Edu.Sena.Autoexpo.Presentacion {
         }
 
         private void BtnCRUD_Click(object sender, EventArgs e) {
-            string placa = tbPlaca.Text.Trim(),
-                modelo = cbModelo.SelectedItem.ToString().Trim(),
-                puertas = cbPuertas.SelectedItem.ToString().Trim(),
-                color = tbColor.Text.Trim(),
+            string placa = "", modelo = "", puertas = "", 
+                color = "", precio = "";
+            int marcaId = 0;
+
+            if (btnCRUD.Text.Equals("Agregar auto") || btnCRUD.Text.Equals("Editar auto")) {
+                placa = tbPlaca.Text.Trim();
+                modelo = cbModelo.SelectedItem.ToString().Trim();
+                puertas = cbPuertas.SelectedItem.ToString().Trim();
+                color = tbColor.Text.Trim();
                 precio = tbPrecio.Text.Trim();
-            int marcaId = Convert.ToInt32(cbMarca.SelectedValue.ToString().Trim());
-            
-            if ((tbPlaca.Text.Equals("") || cbModelo.SelectedItem.Equals("") ||
+                marcaId = Convert.ToInt32(cbMarca.SelectedValue.ToString().Trim());
+
+                if ((tbPlaca.Text.Equals("") || cbModelo.SelectedItem.Equals("") ||
                 cbPuertas.SelectedItem.Equals("") || tbColor.Text.Equals("") ||
                 tbPrecio.Text.Equals(""))) {
-                MessageBox.Show("Llene todos los campos", "ERROR");
-            } else {
-                switch (btnCRUD.Text) {
-                    case "Agregar auto":
-                        auto = new AutoDTO {
-                            Placa = placa,
-                            Modelo = modelo,
-                            NumeroPuertas = Convert.ToInt32(puertas),
-                            Color = color,
-                            Precio = Convert.ToDouble(precio),
-                            Marca = LogicaUtil.MDAO.BuscarPorId(marcaId)
-                        };
-                        LogicaUtil.ADAO.Ingresar(auto);
-                        break;
-                    case "Editar auto":
-                        LogicaUtil.ADAO.Editar(auto);
-                        break;
+                    MessageBox.Show("Llene todos los campos", "ERROR");
+                } else {
+                    switch (btnCRUD.Text) {
+                        case "Agregar auto":
+                            auto = new AutoDTO {
+                                Placa = placa,
+                                Modelo = modelo,
+                                NumeroPuertas = Convert.ToInt32(puertas),
+                                Color = color,
+                                Precio = Convert.ToDouble(precio),
+                                Marca = LogicaUtil.MDAO.BuscarPorId(marcaId)
+                            };
+                            LogicaUtil.ADAO.Ingresar(auto);
+                            break;
+                        case "Editar auto":
+                            LogicaUtil.ADAO.Editar(auto);
+                            break;
+                    }
                 }
             }
 
-            switch (btnCRUD.Text) {
-                case "Eliminar auto":
-                    DialogResult confirmar = MessageBox.Show("¿Desea cerrar sesión?", "Cerrar sesión",
-                        MessageBoxButtons.YesNo);
-                    if (confirmar == DialogResult.Yes) {
-                        LogicaUtil.ADAO.Eliminar(auto);
-                    } else {
-                        return;
-                    }
-                    break;
+            if (btnCRUD.Text.Equals("Eliminar auto")) {
+                DialogResult confirmar = MessageBox.Show("¿Desea eliminar el auto?", "Eliminar auto",
+                    MessageBoxButtons.YesNo);
+                if (confirmar == DialogResult.Yes) {
+                    LogicaUtil.ADAO.Eliminar(auto);
+                } else {
+                    return;
+                }
             }
+
             PresentacionUtil.Index.VentanaAdministrador.ActualizarTablas();
             this.Close();
         }

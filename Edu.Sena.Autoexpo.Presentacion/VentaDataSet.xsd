@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VentaDataSet" targetNamespace="http://tempuri.org/VentaDataSet.xsd" xmlns:mstns="http://tempuri.org/VentaDataSet.xsd" xmlns="http://tempuri.org/VentaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AutoexpoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AutoexpoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Edu.Sena.Autoexpo.Presentacion.Properties.Settings.GlobalReference.Default.AutoexpoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaVentaCompletoTableAdapter" GeneratorDataComponentClassName="VistaVentaCompletoTableAdapter" Name="VistaVentaCompleto" UserDataComponentName="VistaVentaCompletoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AutoexpoConnectionString (Settings)" DbObjectName="Autoexpo.dbo.VistaVentaCompleto" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Nombre cliente], [Apellido Cliente], Placa, Marca, Modelo, [Número de puertas], Color, [Precio sin IVA], Iva, [Total + IVA] FROM dbo.VistaVentaCompleto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre cliente" DataSetColumn="Nombre cliente" />
+              <Mapping SourceColumn="Apellido Cliente" DataSetColumn="Apellido Cliente" />
+              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
+              <Mapping SourceColumn="Marca" DataSetColumn="Marca" />
+              <Mapping SourceColumn="Modelo" DataSetColumn="Modelo" />
+              <Mapping SourceColumn="Número de puertas" DataSetColumn="Número de puertas" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="Precio sin IVA" DataSetColumn="Precio sin IVA" />
+              <Mapping SourceColumn="Iva" DataSetColumn="Iva" />
+              <Mapping SourceColumn="Total + IVA" DataSetColumn="Total + IVA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VentaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="VentaDataSet" msprop:Generator_UserDSName="VentaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaVentaCompleto" msprop:Generator_TableClassName="VistaVentaCompletoDataTable" msprop:Generator_TableVarName="tableVistaVentaCompleto" msprop:Generator_TablePropName="VistaVentaCompleto" msprop:Generator_RowDeletingName="VistaVentaCompletoRowDeleting" msprop:Generator_RowChangingName="VistaVentaCompletoRowChanging" msprop:Generator_RowEvHandlerName="VistaVentaCompletoRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaVentaCompletoRowDeleted" msprop:Generator_UserTableName="VistaVentaCompleto" msprop:Generator_RowChangedName="VistaVentaCompletoRowChanged" msprop:Generator_RowEvArgName="VistaVentaCompletoRowChangeEvent" msprop:Generator_RowClassName="VistaVentaCompletoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre_x0020_cliente" msprop:Generator_ColumnVarNameInTable="columnNombre_cliente" msprop:Generator_ColumnPropNameInRow="Nombre_cliente" msprop:Generator_ColumnPropNameInTable="Nombre_clienteColumn" msprop:Generator_UserColumnName="Nombre cliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido_x0020_Cliente" msprop:Generator_ColumnVarNameInTable="columnApellido_Cliente" msprop:Generator_ColumnPropNameInRow="Apellido_Cliente" msprop:Generator_ColumnPropNameInTable="Apellido_ClienteColumn" msprop:Generator_UserColumnName="Apellido Cliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnPropNameInTable="PlacaColumn" msprop:Generator_UserColumnName="Placa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Marca" msprop:Generator_ColumnVarNameInTable="columnMarca" msprop:Generator_ColumnPropNameInRow="Marca" msprop:Generator_ColumnPropNameInTable="MarcaColumn" msprop:Generator_UserColumnName="Marca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modelo" msprop:Generator_ColumnVarNameInTable="columnModelo" msprop:Generator_ColumnPropNameInRow="Modelo" msprop:Generator_ColumnPropNameInTable="ModeloColumn" msprop:Generator_UserColumnName="Modelo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Número_x0020_de_x0020_puertas" msprop:Generator_ColumnVarNameInTable="columnNúmero_de_puertas" msprop:Generator_ColumnPropNameInRow="Número_de_puertas" msprop:Generator_ColumnPropNameInTable="Número_de_puertasColumn" msprop:Generator_UserColumnName="Número de puertas" type="xs:int" />
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Precio_x0020_sin_x0020_IVA" msprop:Generator_ColumnVarNameInTable="columnPrecio_sin_IVA" msprop:Generator_ColumnPropNameInRow="Precio_sin_IVA" msprop:Generator_ColumnPropNameInTable="Precio_sin_IVAColumn" msprop:Generator_UserColumnName="Precio sin IVA" type="xs:double" />
+              <xs:element name="Iva" msprop:Generator_ColumnVarNameInTable="columnIva" msprop:Generator_ColumnPropNameInRow="Iva" msprop:Generator_ColumnPropNameInTable="IvaColumn" msprop:Generator_UserColumnName="Iva" type="xs:double" />
+              <xs:element name="Total_x0020__x002B__x0020_IVA" msprop:Generator_ColumnVarNameInTable="_columnTotal___IVA" msprop:Generator_ColumnPropNameInRow="_Total___IVA" msprop:Generator_ColumnPropNameInTable="_Total___IVAColumn" msprop:Generator_UserColumnName="Total + IVA" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

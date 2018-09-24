@@ -92,6 +92,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TablasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VentaAutoexpoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentaAutoexpoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VentaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VentaDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +156,28 @@
     </None>
     <None Include="TablasDataSet.xss">
       <DependentUpon>TablasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VentaAutoexpoDataSet.xsc">
+      <DependentUpon>VentaAutoexpoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VentaAutoexpoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentaAutoexpoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VentaAutoexpoDataSet.xss">
+      <DependentUpon>VentaAutoexpoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VentaDataSet.xsc">
+      <DependentUpon>VentaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VentaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VentaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VentaDataSet.xss">
+      <DependentUpon>VentaDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

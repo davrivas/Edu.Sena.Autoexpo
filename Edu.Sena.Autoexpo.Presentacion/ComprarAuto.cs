@@ -56,7 +56,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             double precioAuto = auto.Precio,
                 iva = precioAuto * 0.16;
             VentaDTO nuevaVenta = new VentaDTO {
-                Fecha = DateTime.Now,
                 Iva = iva,
                 Total = precioAuto + iva,
                 Cliente = LogicaUtil.Sesion,
@@ -64,7 +63,6 @@ namespace Edu.Sena.Autoexpo.Presentacion {
             };
 
             LogicaUtil.VDAO.Ingresar(nuevaVenta);
-            //LogicaUtil.ADAO.Vender(auto);
             PresentacionUtil.Index.VentanaCliente.ActualizarTablas();
             this.Close();
         }

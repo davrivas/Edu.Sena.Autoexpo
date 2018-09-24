@@ -28,17 +28,6 @@
             this.tabsAdmin = new System.Windows.Forms.TabControl();
             this.tabVentas = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.númeroDePuertasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioSinIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ivaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vistaVentaCompletoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.autoexpoVistaDataSet = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSet();
             this.tabAutos = new System.Windows.Forms.TabPage();
@@ -67,6 +56,19 @@
             this.vistaVentaCompletoTableAdapter = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSetTableAdapters.VistaVentaCompletoTableAdapter();
             this.vistaAutoCompletoTableAdapter = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSetTableAdapters.VistaAutoCompletoTableAdapter();
             this.vistaClienteTableAdapter = new Edu.Sena.Autoexpo.Presentacion.AutoexpoVistaDataSetTableAdapters.VistaClienteTableAdapter();
+            this.ventaDataSet = new Edu.Sena.Autoexpo.Presentacion.VentaDataSet();
+            this.vistaVentaCompletoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vistaVentaCompletoTableAdapter1 = new Edu.Sena.Autoexpo.Presentacion.VentaDataSetTableAdapters.VistaVentaCompletoTableAdapter();
+            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.númeroDePuertasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioSinIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ivaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalIVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabsAdmin.SuspendLayout();
             this.tabVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,6 +80,8 @@
             this.tabClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaVentaCompletoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabsAdmin
@@ -110,7 +114,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fechaDataGridViewTextBoxColumn,
             this.nombreClienteDataGridViewTextBoxColumn,
             this.apellidoClienteDataGridViewTextBoxColumn,
             this.placaDataGridViewTextBoxColumn,
@@ -121,89 +124,12 @@
             this.precioSinIVADataGridViewTextBoxColumn,
             this.ivaDataGridViewTextBoxColumn,
             this.totalIVADataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.vistaVentaCompletoBindingSource;
+            this.dataGridView1.DataSource = this.vistaVentaCompletoBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(952, 340);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreClienteDataGridViewTextBoxColumn
-            // 
-            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "Nombre cliente";
-            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre cliente";
-            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
-            this.nombreClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoClienteDataGridViewTextBoxColumn
-            // 
-            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "Apellido Cliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
-            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
-            this.apellidoClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // placaDataGridViewTextBoxColumn
-            // 
-            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
-            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
-            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
-            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modeloDataGridViewTextBoxColumn
-            // 
-            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
-            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // númeroDePuertasDataGridViewTextBoxColumn
-            // 
-            this.númeroDePuertasDataGridViewTextBoxColumn.DataPropertyName = "Número de puertas";
-            this.númeroDePuertasDataGridViewTextBoxColumn.HeaderText = "Número de puertas";
-            this.númeroDePuertasDataGridViewTextBoxColumn.Name = "númeroDePuertasDataGridViewTextBoxColumn";
-            this.númeroDePuertasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioSinIVADataGridViewTextBoxColumn
-            // 
-            this.precioSinIVADataGridViewTextBoxColumn.DataPropertyName = "Precio sin IVA";
-            this.precioSinIVADataGridViewTextBoxColumn.HeaderText = "Precio sin IVA";
-            this.precioSinIVADataGridViewTextBoxColumn.Name = "precioSinIVADataGridViewTextBoxColumn";
-            this.precioSinIVADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ivaDataGridViewTextBoxColumn
-            // 
-            this.ivaDataGridViewTextBoxColumn.DataPropertyName = "Iva";
-            this.ivaDataGridViewTextBoxColumn.HeaderText = "Iva";
-            this.ivaDataGridViewTextBoxColumn.Name = "ivaDataGridViewTextBoxColumn";
-            this.ivaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalIVADataGridViewTextBoxColumn
-            // 
-            this.totalIVADataGridViewTextBoxColumn.DataPropertyName = "Total + IVA";
-            this.totalIVADataGridViewTextBoxColumn.HeaderText = "Total + IVA";
-            this.totalIVADataGridViewTextBoxColumn.Name = "totalIVADataGridViewTextBoxColumn";
-            this.totalIVADataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vistaVentaCompletoBindingSource
             // 
@@ -437,10 +363,96 @@
             // 
             this.vistaClienteTableAdapter.ClearBeforeFill = true;
             // 
+            // ventaDataSet
+            // 
+            this.ventaDataSet.DataSetName = "VentaDataSet";
+            this.ventaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vistaVentaCompletoBindingSource1
+            // 
+            this.vistaVentaCompletoBindingSource1.DataMember = "VistaVentaCompleto";
+            this.vistaVentaCompletoBindingSource1.DataSource = this.ventaDataSet;
+            // 
+            // vistaVentaCompletoTableAdapter1
+            // 
+            this.vistaVentaCompletoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // nombreClienteDataGridViewTextBoxColumn
+            // 
+            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "Nombre cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "Nombre cliente";
+            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
+            this.nombreClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoClienteDataGridViewTextBoxColumn
+            // 
+            this.apellidoClienteDataGridViewTextBoxColumn.DataPropertyName = "Apellido Cliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.HeaderText = "Apellido Cliente";
+            this.apellidoClienteDataGridViewTextBoxColumn.Name = "apellidoClienteDataGridViewTextBoxColumn";
+            this.apellidoClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // placaDataGridViewTextBoxColumn
+            // 
+            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modeloDataGridViewTextBoxColumn
+            // 
+            this.modeloDataGridViewTextBoxColumn.DataPropertyName = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.HeaderText = "Modelo";
+            this.modeloDataGridViewTextBoxColumn.Name = "modeloDataGridViewTextBoxColumn";
+            this.modeloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // númeroDePuertasDataGridViewTextBoxColumn
+            // 
+            this.númeroDePuertasDataGridViewTextBoxColumn.DataPropertyName = "Número de puertas";
+            this.númeroDePuertasDataGridViewTextBoxColumn.HeaderText = "Número de puertas";
+            this.númeroDePuertasDataGridViewTextBoxColumn.Name = "númeroDePuertasDataGridViewTextBoxColumn";
+            this.númeroDePuertasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioSinIVADataGridViewTextBoxColumn
+            // 
+            this.precioSinIVADataGridViewTextBoxColumn.DataPropertyName = "Precio sin IVA";
+            this.precioSinIVADataGridViewTextBoxColumn.HeaderText = "Precio sin IVA";
+            this.precioSinIVADataGridViewTextBoxColumn.Name = "precioSinIVADataGridViewTextBoxColumn";
+            this.precioSinIVADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ivaDataGridViewTextBoxColumn
+            // 
+            this.ivaDataGridViewTextBoxColumn.DataPropertyName = "Iva";
+            this.ivaDataGridViewTextBoxColumn.HeaderText = "Iva";
+            this.ivaDataGridViewTextBoxColumn.Name = "ivaDataGridViewTextBoxColumn";
+            this.ivaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalIVADataGridViewTextBoxColumn
+            // 
+            this.totalIVADataGridViewTextBoxColumn.DataPropertyName = "Total + IVA";
+            this.totalIVADataGridViewTextBoxColumn.HeaderText = "Total + IVA";
+            this.totalIVADataGridViewTextBoxColumn.Name = "totalIVADataGridViewTextBoxColumn";
+            this.totalIVADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 420);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnEliminar);
@@ -463,6 +475,8 @@
             this.tabClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ventaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaVentaCompletoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,17 +498,6 @@
         private AutoexpoVistaDataSet autoexpoVistaDataSet;
         private System.Windows.Forms.BindingSource vistaVentaCompletoBindingSource;
         private AutoexpoVistaDataSetTableAdapters.VistaVentaCompletoTableAdapter vistaVentaCompletoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn númeroDePuertasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioSinIVADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ivaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalIVADataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource vistaAutoCompletoBindingSource;
         private AutoexpoVistaDataSetTableAdapters.VistaAutoCompletoTableAdapter vistaAutoCompletoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -512,5 +515,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private VentaDataSet ventaDataSet;
+        private System.Windows.Forms.BindingSource vistaVentaCompletoBindingSource1;
+        private VentaDataSetTableAdapters.VistaVentaCompletoTableAdapter vistaVentaCompletoTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn númeroDePuertasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioSinIVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ivaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalIVADataGridViewTextBoxColumn;
     }
 }
